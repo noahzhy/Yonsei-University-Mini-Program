@@ -2,18 +2,31 @@
 <view class="content">
   <image class="background-pictrue"
     mode="widthFix"
-    src='/images/hyu.jpg'>
+    src='/images/hyu-bg.jpg'>
   </image>
 
-  <image class="background-cover"
+  <!-- <image class="background-cover"
     mode="widthFix"
     src='/images/cover.jpg'>
-  </image>
+  </image> -->
 
-  <view class="mid-five-row">
-    <view
-      style="flex:1">
-      <view class="mid-five-col">
+  <view class="row">
+
+    <view style="flex:1">
+      <view class="col">
+        <image 
+          class='mid-five-one'
+          src='/images/book-sell.png'>
+        </image>
+        <text
+          class='mid-five-font'>
+          二手书
+        </text>
+      </view>
+    </view>
+
+    <view style="flex:1">
+      <view class="col">
         <image 
           class='mid-five-one'
           src='/images/question.png'>
@@ -25,9 +38,8 @@
       </view>
     </view>
 
-    <view
-      style="flex:1">
-      <view class="mid-five-col">
+    <view style="flex:1">
+      <view class="col">
         <image 
           class='mid-five-one'
           src='/images/class-rec.png'>
@@ -39,9 +51,8 @@
       </view>
     </view>
 
-    <view
-      style="flex:1">
-      <view class="mid-five-col">
+    <view style="flex:1">
+      <view class="col">
         <image 
           class='mid-five-one'
           src='/images/rent.png'>
@@ -54,4 +65,56 @@
     </view>
 
   </view>
+
+  <view class="divLine"></view>
+
+  <view class='books'>
+
+    <text class='books-title-mini'>知识就是力量</text>
+    <view class='books-row'>
+      <text class='books-title'>二手书交易</text>
+      <text
+        decode="{{true}}" 
+        class='books-title-more'>&nbsp;></text>
+    </view>
+
+    <view class='books-row'>
+      <view style="flex:1">
+        <image class='books-cover'
+          mode="widthFix"
+          src='/images/book-cover.jpg'>
+        </image>
+      </view>
+
+      <view style="flex:1">
+        <image class='books-cover'
+          mode="widthFix"
+          src='/images/book-cover.jpg'>
+        </image>
+      </view>
+
+      <view style="flex:1">
+        <image class='books-cover'
+          mode="widthFix"
+          src='/images/book-cover.jpg'>
+        </image>
+      </view>
+
+      <view style="flex:1">
+        <image class='books-cover'
+          mode="widthFix"
+          src='/images/book-cover.jpg'>
+        </image>
+      </view>
+
+
+    </view>
+
+
+
+
+  </view>
+
+  <view class="divLine"></view>
+
 </view>

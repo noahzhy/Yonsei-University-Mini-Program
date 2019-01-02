@@ -1,14 +1,15 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/class/class"
   ],
-  "window":{
-    "backgroundTextStyle":"dark",
+  "window": {
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#004483",
     "navigationBarTitleText": "汉阳小狮子",
-    "navigationBarTextStyle":"white",
-    "navigationStyle":"custom"
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "default"
   },
   "tabBar": {
     "color": "#a9b7b7",
@@ -24,7 +25,7 @@
       {
         "selectedIconPath": "images/classes.png",
         "iconPath": "images/classes_linear.png",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/class/class",
         "text": "课程评价"
       },
       {
@@ -38,12 +39,6 @@
         "iconPath": "images/hourse_linear.png",
         "pagePath": "pages/index/index",
         "text": "租房信息"
-      },
-      {
-        "selectedIconPath": "images/user.png",
-        "iconPath": "images/user_linear.png",
-        "pagePath": "pages/index/index",
-        "text": "狮宝宝"
       }
     ]
   }

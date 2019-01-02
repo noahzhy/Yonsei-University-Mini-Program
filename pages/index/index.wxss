@@ -1,5 +1,5 @@
 /**index.wxss**/
-.userinfo {
+/* .userinfo {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,19 +18,27 @@
 
 .usermotto {
   margin-top: 200px;
-}
+} */
 
 .content {
-  width: 100%;
-  height: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.divLine{
+  background: #EDF2F5;
+  height: 1rpx;
+  margin-left: 48rpx;
+  margin-right: 48rpx;
 }
 
 .background-pictrue {
   width: 100%;
   height: 320rpx;
-  position: fixed;
+  /* position: fixed;
   overflow: hidden;
-  z-index: 0;
+  z-index: 0; */
 }
 
 .background-cover {
@@ -39,13 +47,17 @@
   opacity:0.15;
 }
 
-.mid-five-row {
-  height:100rpx;
+.row {
+  background: #fff;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  padding-bottom: 16rpx;
   display: flex;
   flex-direction: row;
 }
 
-.mid-five-col {
+.col {
+  background: #fff;
   align-items:center;
   display: flex;
   flex-direction: column;
@@ -63,4 +75,52 @@
   text-align:center;
   font-size: 10pt;
   margin-top: -24rpx;
+  margin-bottom: 16rpx;
+}
+
+.books {
+  background: #fff;
+  height: 320rpx;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 32rpx; */
+  padding-top: 32rpx;
+  padding-left: 48rpx;
+  padding-right: 48rpx;
+  margin-bottom: 16rpx;
+}
+
+.books-row {
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+}
+
+.books-title {
+  color: #000;
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+.books-title-mini {
+  color: #004483;
+  font-size: 10pt;
+  margin-bottom: 2rpx;
+}
+
+.books-title-more {
+  width: 36rpx;
+  height: 36rpx;
+  font-weight: bold;
+  /* background: #E6F4F5;
+  border-radius: 50%; */
+  color: #004483;
+  font-size: 12pt;
+}
+
+.books-cover {
+  width: 154rpx;
+  height: 154rpx;
+  margin-top: 16rpx;
+  margin-right: 16rpx;
 }
