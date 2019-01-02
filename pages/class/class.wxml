@@ -1,0 +1,36 @@
+<!--pages/class.wxml-->
+<view class="search-bar">
+  <view class='search-bar-row'>
+    <input class='search-input' 
+      placeholder="输入课程名或教授名搜索">
+    </input>
+
+    <image class='search-icon'
+      src='/images/search-1.png'>
+    </image>
+
+  </view>
+
+  <view class='col'>
+
+    <view class='row'>
+      <text style='flex:1'
+        class='title-max'>课程评价</text>
+      <view style='flex:1'
+        class='row-rank'>
+        <text class='title-rank-time'>按时间
+        </text>
+
+        <text class='title-rank-point'>按评分
+        </text>
+      </view>
+
+
+    </view>
+  
+  
+  </view>
+
+
+
+</view>

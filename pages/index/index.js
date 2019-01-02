@@ -5,6 +5,7 @@ const app = getApp()
 Page({
   data: {
     motto: 'Hello World',
+    "stars": '',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -50,5 +51,46 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+  //以下代码是由 张昊宇 写的
+  onShow: function () {
+    // 页面显示
+    var that = this;
+    var renderData = {
+      "stars": that.starCount(4.8)
+    };
+    that.setData(renderData)
+  },
+
+  starCount: function (originStars) {
+    //计算星星显示需要的数据，用数组stars存储五个值，分别对应每个位置的星星是全星、半星还是空星
+    var starNum = originStars * 10 / 10, stars = [], i = 0;
+    do {
+      if (starNum >= 1) {
+        stars[i] = 'full';
+      } else if (starNum >= 0.5) {
+        stars[i] = 'half';
+      } else {
+        stars[i] = 'no';
+      }
+      starNum--;
+      i++;
+    } while (i < 5)
+    return stars;
+  },
+  formSubmit: function (event) {
+    var that = this;
+    var renderData = {
+      "stars": that.starCount(event.detail.value.input)
+    };
+    that.setData(renderData);
   }
+
+
+
+
 })
+
+
+

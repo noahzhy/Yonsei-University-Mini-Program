@@ -1,0 +1,77 @@
+/* pages/class.wxss */
+.search-bar {
+  background: #004483;
+  width: 100%;
+  position: fixed;
+}
+
+.search-input {
+  font-size: 13pt;
+}
+
+.search-icon {
+  width: 48rpx;
+  height: 48rpx;
+  position: absolute;
+  right: 32rpx;
+  top: 32rpx;
+}
+
+.search-bar-row {
+  background: white;
+  margin: 16rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-left: 32rpx;
+  padding-right: 80rpx;
+  border-radius: 20rpx;
+  flex: auto;
+}
+
+.col {
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  background: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.row-rank {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  position: absolute;
+  right: 48rpx;
+}
+
+.title-max {
+  font-size: 16pt;
+  margin: 48rpx;
+  font-weight: bold;
+  color: black;
+}
+
+.title-class-name {
+  font-size: 14pt;
+  font-weight: bold;
+  color: black;
+}
+
+.title-rank-time {
+  font-weight: bold;
+  color: #004483;
+  margin-top: 56rpx;
+  margin-right: 16rpx;
+  font-size: 13pt;
+}
+
+.title-rank-point {
+  font-size: 13pt;
+  margin-top: 56rpx;
+  color: gray;
+}

@@ -1,14 +1,19 @@
 <!--index.wxml-->
 <view class="content">
-  <image class="background-pictrue"
+  <!-- <image class="background-pictrue"
     mode="widthFix"
     src='/images/hyu-bg.jpg'>
-  </image>
+  </image> -->
 
   <!-- <image class="background-cover"
     mode="widthFix"
     src='/images/cover.jpg'>
   </image> -->
+
+  <!-- <view class="page__hd" 
+    style="position:fixed; top:0;width: 750rpx;">
+    //这里放置公告
+  </view> -->
 
   <view class="row">
 
@@ -46,7 +51,7 @@
         </image>
         <text
           class='mid-five-font'>
-          课程推荐
+          课程评价
         </text>
       </view>
     </view>
@@ -116,5 +121,85 @@
   </view>
 
   <view class="divLine"></view>
+
+  <view class='class-rec'>
+
+    <text class='books-title-mini'>就决定是你了</text>
+    <view class='books-row'>
+      <text class='books-title'>课程评价</text>
+      <text
+        decode="{{true}}" 
+        class='books-title-more'>&nbsp;></text>
+    </view>
+
+    <view class='class-col'>
+      <view class='class-row'>
+        <text style="flex:1"
+          class='class-title'>高级韩国语</text>
+        <text style="flex:1"
+          class='class-prof-name'>조성문</text>
+      </view>
+      <text class='class-rec-content'>课程评价，然后考试内容什么的剧透啊，或者出勤方式提及一下，或者什么其他的相关内容。总之这仅仅只是一段示例文字。</text>
+    </view>
+
+    <view class="class-star-row">
+      <block wx:for="{{stars}}" wx:for-item="item">
+        <image 
+          class="class-star"
+          src="../../images/{{item}}-star.png">
+        </image>
+      </block>
+
+      <text class='class-rate-point'>4.8</text>
+    </view>
+
+    <view class="divLine-in"></view>
+
+    <view class='class-col'>
+      <view class='class-row'>
+        <text style="flex:1"
+          class='class-title'>高级韩国语</text>
+        <text style="flex:1"
+          class='class-prof-name'>조성문</text>
+      </view>
+      <text class='class-rec-content'>课程评价，然后考试内容什么的剧透啊，或者出勤方式提及一下，或者什么其他的相关内容。总之这仅仅只是一段示例文字。</text>
+    </view>
+
+    <view class="class-star-row">
+      <block wx:for="{{stars}}" wx:for-item="item">
+        <image 
+          class="class-star"
+          src="../../images/{{item}}-star.png">
+        </image>
+      </block>
+
+      <text class='class-rate-point'>4.8</text>
+    </view>
+
+    <view class="divLine-in"></view>
+
+    <view class='class-col'>
+      <view class='class-row'>
+        <text style="flex:1"
+          class='class-title'>高级韩国语</text>
+        <text style="flex:1"
+          class='class-prof-name'>조성문</text>
+      </view>
+      <text class='class-rec-content'>课程评价，然后考试内容什么的剧透啊，或者出勤方式提及一下，或者什么其他的相关内容。总之这仅仅只是一段示例文字。</text>
+    </view>
+
+    <view class="class-star-row">
+      <block wx:for="{{stars}}" wx:for-item="item">
+        <image 
+          class="class-star"
+          src="../../images/{{item}}-star.png">
+        </image>
+      </block>
+
+      <text class='class-rate-point'>4.8</text>
+    </view>
+
+
+  </view>
 
 </view>

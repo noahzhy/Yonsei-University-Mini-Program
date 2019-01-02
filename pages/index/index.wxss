@@ -21,7 +21,7 @@
 } */
 
 .content {
-  background: #fff;
+  background: white;
   display: flex;
   flex-direction: column;
 }
@@ -31,6 +31,11 @@
   height: 1rpx;
   margin-left: 48rpx;
   margin-right: 48rpx;
+}
+
+.divLine-in{
+  background: #EDF2F5;
+  height: 1rpx;
 }
 
 .background-pictrue {
@@ -48,7 +53,7 @@
 }
 
 .row {
-  background: #fff;
+  background: white;
   padding-left: 32rpx;
   padding-right: 32rpx;
   padding-bottom: 16rpx;
@@ -57,7 +62,7 @@
 }
 
 .col {
-  background: #fff;
+  background: white;
   align-items:center;
   display: flex;
   flex-direction: column;
@@ -79,11 +84,9 @@
 }
 
 .books {
-  background: #fff;
-  height: 320rpx;
+  background: white;
   display: flex;
   flex-direction: column;
-  /* margin-top: 32rpx; */
   padding-top: 32rpx;
   padding-left: 48rpx;
   padding-right: 48rpx;
@@ -91,31 +94,28 @@
 }
 
 .books-row {
-  background: #fff;
+  background: white;
   display: flex;
   flex-direction: row;
 }
 
 .books-title {
-  color: #000;
+  color: black;
   font-weight: bold;
-  font-size: 12pt;
+  font-size: 16pt;
 }
 
 .books-title-mini {
   color: #004483;
   font-size: 10pt;
-  margin-bottom: 2rpx;
 }
 
 .books-title-more {
   width: 36rpx;
   height: 36rpx;
   font-weight: bold;
-  /* background: #E6F4F5;
-  border-radius: 50%; */
   color: #004483;
-  font-size: 12pt;
+  font-size: 16pt;
 }
 
 .books-cover {
@@ -123,4 +123,69 @@
   height: 154rpx;
   margin-top: 16rpx;
   margin-right: 16rpx;
+  border-radius: 4rpx;
+}
+
+.class-row {
+  background: white;
+  padding-top: 16rpx;
+  padding-bottom: 8rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.class-col {
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.class-rec {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 32rpx;
+  padding-left: 48rpx;
+  padding-right: 48rpx;
+  margin-bottom: 16rpx;
+}
+
+.class-title {
+  color: black;
+  /* font-weight: bold; */
+  font-size: 14pt;
+}
+
+.class-prof-name {
+  padding-top: 6rpx;
+  text-align: right;
+  color: #004483;
+  font-size: 11pt;
+}
+
+.class-rec-content {
+  color: darkgray;
+  font-size: 11pt;
+}
+
+.class-rate-point {
+  color: black;
+  font-size: 12pt;
+  font-weight: bold;
+  margin-left: 16rpx;
+}
+
+.class-star-row {
+  background: white;
+  padding-bottom: 16rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.class-star {
+  padding-top: 8rpx;
+  width:16px;
+  height:16px;
+  margin-right: 8rpx;
+  vertical-align: bottom;
 }
