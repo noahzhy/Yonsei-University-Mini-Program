@@ -10,9 +10,10 @@
     </image>
 
   </view>
+</view>
 
+<view class='content'>
   <view class='col'>
-
     <view class='row'>
       <text style='flex:1'
         class='title-max'>课程评价</text>
@@ -20,17 +21,83 @@
         class='row-rank'>
         <text class='title-rank-time'>按时间
         </text>
-
         <text class='title-rank-point'>按评分
         </text>
       </view>
-
-
     </view>
-  
-  
+
+    <view class="divLine"></view>
+
+    <text class='title-class-name'>高级韩国语 : 조성문</text>
+
+    <view class="class-star-row">
+      <block wx:for="{{stars}}" wx:for-item="item">
+        <image 
+          class="class-star"
+          src="../../images/{{item}}-star.png">
+        </image>
+      </block>
+    </view>
+
+    <text class='class-content-time'>2018年12月25日</text>
+
+    <text class='class-content'>{{motto}}</text>
+
+    <view class="divLine"></view>
+
+
+    <text class='title-class-name'>高级韩国语 : 조성문</text>
+
+    <view class="class-star-row">
+      <block wx:for="{{stars}}" wx:for-item="item">
+        <image 
+          class="class-star"
+          src="../../images/{{item}}-star.png">
+        </image>
+      </block>
+    </view>
+
+    <text class='class-content-time'>2018年12月25日</text>
+
+    <text class='class-content'>{{motto}}</text>
+
+    <view class="divLine"></view>
+
+
+    <text class='title-class-name'>高级韩国语 : 조성문</text>
+
+    <view class="class-star-row">
+      <block wx:for="{{stars}}" wx:for-item="item">
+        <image 
+          class="class-star"
+          src="../../images/{{item}}-star.png">
+        </image>
+      </block>
+    </view>
+
+    <text class='class-content-time'>2018年12月25日</text>
+
+    <text class='class-content'>{{motto}}</text>
+
+    <view class="divLine"></view>
+
+
+    <text class='title-class-name'>高级韩国语 : 조성문</text>
+
+    <view class="class-star-row">
+      <block wx:for="{{stars}}" wx:for-item="item">
+        <image 
+          class="class-star"
+          src="../../images/{{item}}-star.png">
+        </image>
+      </block>
+    </view>
+
+    <text class='class-content-time'>2018年12月25日</text>
+
+    <text class='class-content'>{{motto}}</text>
+
+    <view class="divLine"></view>
+
   </view>
-
-
-
 </view>

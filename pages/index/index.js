@@ -4,8 +4,8 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
     "stars": '',
+    motto: '课程评价，然后考试内容什么的剧透啊，或者出勤方式提及一下，或者什么其他的相关内容。总之这仅仅只是一段示例文字。',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')

@@ -3,6 +3,7 @@
   background: #004483;
   width: 100%;
   position: fixed;
+  z-index: 999;
 }
 
 .search-input {
@@ -28,7 +29,15 @@
   flex: auto;
 }
 
+.content {
+  background: white;
+  display: flex;
+  padding: 48rpx;
+  flex-direction: column;
+}
+
 .col {
+  margin-top: 96rpx;
   background: white;
   display: flex;
   flex-direction: column;
@@ -38,6 +47,11 @@
   background: white;
   display: flex;
   flex-direction: row;
+}
+
+.divLine{
+  background: #EDF2F5;
+  height: 1rpx;
 }
 
 .row-rank {
@@ -51,27 +65,57 @@
 
 .title-max {
   font-size: 16pt;
-  margin: 48rpx;
   font-weight: bold;
   color: black;
+  padding-bottom: 24rpx;
 }
 
 .title-class-name {
   font-size: 14pt;
   font-weight: bold;
+  margin-top: 24rpx;
   color: black;
 }
 
 .title-rank-time {
   font-weight: bold;
   color: #004483;
-  margin-top: 56rpx;
+  margin-top:8rpx;
   margin-right: 16rpx;
   font-size: 13pt;
 }
 
 .title-rank-point {
   font-size: 13pt;
-  margin-top: 56rpx;
+  margin-top:8rpx;
   color: gray;
 }
+
+.class-content {
+  margin-top: 8rpx;
+  margin-bottom: 32rpx;
+  font-size: 12pt;
+  color: black;
+}
+
+.class-content-time {
+  font-size: 10pt;
+  color: gray;
+}
+
+.class-star-row {
+  background: white;
+  padding-top: 8rpx;
+  padding-bottom: 16rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.class-star {
+  padding-top: 8rpx;
+  width:16px;
+  height:16px;
+  margin-right: 8rpx;
+  vertical-align: bottom;
+}
+
