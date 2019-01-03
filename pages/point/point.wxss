@@ -1,0 +1,118 @@
+/* pages/point/point.wxss */
+.content {
+  background: white;
+  display: flex;
+  padding: 48rpx;
+  flex-direction: column;
+}
+
+.col {
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  background: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.divLine{
+  background: #EDF2F5;
+  height: 1rpx;
+  margin-top: 32rpx;
+}
+
+.divLine-mini{
+  background: #EDF2F5;
+  height: 1rpx;
+}
+
+.title-max {
+  font-size: 16pt;
+  font-weight: bold;
+  color: black;
+  padding-bottom: 24rpx;
+}
+
+.title-mini-gray {
+  color: gray;
+  font-size: 10pt;
+  margin-top: 12rpx;
+  margin-bottom: 12rpx;
+}
+
+.title-mini-black {
+  color: black;
+  font-size: 12pt;
+  margin-top: 4rpx;
+  margin-bottom: 12rpx;
+}
+
+.button {
+  font-size: 12pt;
+  color: white;
+  text-align: center;
+  height: 80rpx;
+  font-weight: bold;
+  padding-left: 32rpx;
+  padding-right: 32rpx;
+  margin-top: -10rpx;
+  background: #004483;
+  border-radius: 40rpx;
+}
+
+.class-star-row {
+  background: white;
+  padding-top: 8rpx;
+  margin-bottom: 16rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.class-star-row-mini {
+  background: white;
+  margin-top: 16rpx;
+  padding-bottom: 16rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.class-star {
+  width:40rpx;
+  height:40rpx;
+  margin-right: 8rpx;
+  vertical-align: bottom;
+}
+
+.class-star-mini {
+  padding-top: 12rpx;
+  width:24rpx;
+  height:24rpx;
+  margin-right: 8rpx;
+  vertical-align: bottom;
+}
+
+.class-rate-point {
+  color: black;
+  margin-top: -10rpx;
+  font-size: 16pt;
+  font-weight: bold;
+  margin-left: 16rpx;
+}
+
+.class-content {
+  margin-top: 8rpx;
+  margin-bottom: 32rpx;
+  font-size: 12pt;
+  color: black;
+}
+
+.class-content-time {
+  font-size: 10pt;
+  color: gray;
+}
+
+
+

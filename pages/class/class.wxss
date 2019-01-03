@@ -113,8 +113,8 @@
 
 .class-star {
   padding-top: 8rpx;
-  width:16px;
-  height:16px;
+  width:24rpx;
+  height:24rpx;
   margin-right: 8rpx;
   vertical-align: bottom;
 }
