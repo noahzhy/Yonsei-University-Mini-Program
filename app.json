@@ -39,7 +39,7 @@
       {
         "selectedIconPath": "images/hourse.png",
         "iconPath": "images/hourse_linear.png",
-        "pagePath": "pages/comment/comment",
+        "pagePath": "pages/point/point",
         "text": "租房信息"
       }
     ]

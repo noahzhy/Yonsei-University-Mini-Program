@@ -85,6 +85,11 @@ Page({
       "stars": that.starCount(event.detail.value.input)
     };
     that.setData(renderData);
+  },
+  toClass(){
+    wx.switchTab({
+      url: '../class/class',
+    })
   }
 
 

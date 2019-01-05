@@ -3,8 +3,9 @@
   <view class='col'>
     <view class='row'>
       <text style='flex:1'
-        class='title-max'>高级韩国语</text>
-      <button class='button'>写新评价</button>
+        class='title-max'>고급한국어 : 조성문</text>
+      <button class='button'
+        bindtap='addNew'>写新评价</button>
     </view>
 
     <view class="class-star-row">
@@ -23,15 +24,15 @@
       <text style='flex:1'
         class='title-mini-gray'>课程名</text>
       <text style='flex:3'
-        class='title-mini-black'>고급한국어</text>
+        class='title-mini-black'>高级韩国语</text>
     </view>
     <!-- 教授韩文名 -->
-    <view class='row'>
+    <!-- <view class='row'>
       <text style='flex:1'
         class='title-mini-gray'>教授名</text>
       <text style='flex:3'
         class='title-mini-black'>조성문</text>
-    </view>
+    </view> -->
     <!-- 给分 -->
     <view class='row'>
       <text style='flex:1'
@@ -80,10 +81,10 @@
       </image>
     </block>
   </view>
-
   <text class='class-content-time'>2018年12月25日</text>
   <text class='class-content'>{{motto}}</text>
   <view class="divLine-mini"></view>
+
   <view class="class-star-row-mini">
     <block wx:for="{{stars}}" wx:for-item="item">
       <image 
@@ -92,10 +93,10 @@
       </image>
     </block>
   </view>
-
   <text class='class-content-time'>2018年12月25日</text>
   <text class='class-content'>{{motto}}</text>
   <view class="divLine-mini"></view>
+
   <view class="class-star-row-mini">
     <block wx:for="{{stars}}" wx:for-item="item">
       <image 
@@ -104,7 +105,6 @@
       </image>
     </block>
   </view>
-
   <text class='class-content-time'>2018年12月25日</text>
   <text class='class-content'>{{motto}}</text>
   <view class="divLine-mini"></view>

@@ -1,71 +1,40 @@
 <!--index.wxml-->
 <view class="content">
-  <!-- <image class="background-pictrue"
-    mode="widthFix"
-    src='/images/hyu-bg.jpg'>
-  </image> -->
-
-  <!-- <image class="background-cover"
-    mode="widthFix"
-    src='/images/cover.jpg'>
-  </image> -->
-
-  <!-- <view class="page__hd" 
-    style="position:fixed; top:0;width: 750rpx;">
-    //这里放置公告
-  </view> -->
-
   <view class="row">
-
     <view style="flex:1">
       <view class="col">
-        <image 
-          class='mid-five-one'
+        <image class='mid-five-one'
           src='/images/book-sell.png'>
         </image>
-        <text
-          class='mid-five-font'>
-          二手书
-        </text>
+        <text class='mid-five-font'>二手书</text>
       </view>
     </view>
 
     <view style="flex:1">
       <view class="col">
-        <image 
-          class='mid-five-one'
+        <image class='mid-five-one'
           src='/images/question.png'>
         </image>
-        <text
-          class='mid-five-font'>
-          问题
-        </text>
+        <text class='mid-five-font'>问题</text>
       </view>
     </view>
 
     <view style="flex:1">
-      <view class="col">
-        <image 
-          class='mid-five-one'
+      <view class="col"
+        bindtap='toClass'>
+        <image class='mid-five-one'
           src='/images/class-rec.png'>
         </image>
-        <text
-          class='mid-five-font'>
-          课程评价
-        </text>
+        <text class='mid-five-font'>课程评价</text>
       </view>
     </view>
 
     <view style="flex:1">
       <view class="col">
-        <image 
-          class='mid-five-one'
+        <image class='mid-five-one'
           src='/images/rent.png'>
         </image>
-        <text
-          class='mid-five-font'>
-          租房
-        </text>
+        <text class='mid-five-font'>租房</text>
       </view>
     </view>
 
@@ -77,7 +46,7 @@
 
     <text class='books-title-mini'>知识就是力量</text>
     <view class='books-row'>
-      <text class='books-title'>二手书交易</text>
+      <text class='title-max'>二手书交易</text>
       <text
         decode="{{true}}" 
         class='books-title-more'>&nbsp;></text>
@@ -112,12 +81,7 @@
         </image>
       </view>
 
-
     </view>
-
-
-
-
   </view>
 
   <view class="divLine"></view>
@@ -125,8 +89,9 @@
   <view class='class-rec'>
 
     <text class='books-title-mini'>就决定是你了</text>
-    <view class='books-row'>
-      <text class='books-title'>课程评价</text>
+    <view class='books-row'
+      bindtap='toClass'>
+      <text class='title-max'>课程评价</text>
       <text
         decode="{{true}}" 
         class='books-title-more'>&nbsp;></text>
@@ -201,5 +166,4 @@
 
 
   </view>
-
 </view>

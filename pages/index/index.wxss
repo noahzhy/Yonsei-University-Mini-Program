@@ -1,38 +1,4 @@
 /**index.wxss**/
-/* .userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
-} */
-
-.content {
-  background: white;
-  display: flex;
-  flex-direction: column;
-}
-
-.divLine{
-  background: #EDF2F5;
-  height: 1rpx;
-  margin-left: 48rpx;
-  margin-right: 48rpx;
-}
-
 .divLine-in{
   background: #EDF2F5;
   height: 1rpx;
@@ -41,9 +7,6 @@
 .background-pictrue {
   width: 100%;
   height: 320rpx;
-  /* position: fixed;
-  overflow: hidden;
-  z-index: 0; */
 }
 
 .background-cover {
@@ -53,25 +16,16 @@
 }
 
 .row {
-  background: white;
-  padding-left: 32rpx;
-  padding-right: 32rpx;
   padding-bottom: 16rpx;
-  display: flex;
-  flex-direction: row;
 }
 
 .col {
-  background: white;
   align-items:center;
-  display: flex;
-  flex-direction: column;
 }
 
 .mid-five-one {
   width: 72rpx;
   height: 72rpx;
-  margin-top: 32rpx;
   margin-left: 32rpx;
   margin-right: 32rpx;
 }
@@ -79,7 +33,7 @@
 .mid-five-font {
   text-align:center;
   font-size: 10pt;
-  margin-top: -24rpx;
+  margin-top: 16rpx;
   margin-bottom: 16rpx;
 }
 
@@ -88,8 +42,6 @@
   display: flex;
   flex-direction: column;
   padding-top: 32rpx;
-  padding-left: 48rpx;
-  padding-right: 48rpx;
   margin-bottom: 16rpx;
 }
 
@@ -99,10 +51,8 @@
   flex-direction: row;
 }
 
-.books-title {
-  color: black;
-  font-weight: bold;
-  font-size: 16pt;
+.title-max {
+  padding-bottom: 0rpx;
 }
 
 .books-title-mini {
@@ -145,14 +95,11 @@
   display: flex;
   flex-direction: column;
   padding-top: 32rpx;
-  padding-left: 48rpx;
-  padding-right: 48rpx;
   margin-bottom: 16rpx;
 }
 
 .class-title {
   color: black;
-  /* font-weight: bold; */
   font-size: 14pt;
 }
 
@@ -168,24 +115,6 @@
   font-size: 11pt;
 }
 
-.class-rate-point {
-  color: black;
-  font-size: 12pt;
-  font-weight: bold;
-  margin-left: 16rpx;
-}
-
-.class-star-row {
-  background: white;
-  padding-bottom: 16rpx;
-  display: flex;
-  flex-direction: row;
-}
-
 .class-star {
   padding-top: 12rpx;
-  width:24rpx;
-  height:24rpx;
-  margin-right: 8rpx;
-  vertical-align: bottom;
 }

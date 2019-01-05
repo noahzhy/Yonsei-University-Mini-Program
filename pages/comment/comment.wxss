@@ -1,1 +1,23 @@
 /* pages/comment/comment.wxss */
+.title-max {
+  padding-bottom: 0rpx;
+}
+
+.textarea {
+  width: 95%;
+  font-size: 14pt;
+  height: 256rpx;
+  margin-top: 4rpx;
+  margin-bottom: 12rpx;
+  padding: 16rpx;
+  background: whitesmoke;
+  border-radius: 8rpx;
+}
+
+.button-add {
+  width: 100%;
+  margin-top: 16rpx;
+  background: #004483;
+  border-radius: 48rpx;
+  color: white;
+}

@@ -29,29 +29,8 @@
   flex: auto;
 }
 
-.content {
-  background: white;
-  display: flex;
-  padding: 48rpx;
-  flex-direction: column;
-}
-
 .col {
   margin-top: 96rpx;
-  background: white;
-  display: flex;
-  flex-direction: column;
-}
-
-.row {
-  background: white;
-  display: flex;
-  flex-direction: row;
-}
-
-.divLine{
-  background: #EDF2F5;
-  height: 1rpx;
 }
 
 .row-rank {
@@ -64,9 +43,6 @@
 }
 
 .title-max {
-  font-size: 16pt;
-  font-weight: bold;
-  color: black;
   padding-bottom: 24rpx;
 }
 
@@ -102,20 +78,3 @@
   font-size: 10pt;
   color: gray;
 }
-
-.class-star-row {
-  background: white;
-  padding-top: 8rpx;
-  padding-bottom: 16rpx;
-  display: flex;
-  flex-direction: row;
-}
-
-.class-star {
-  padding-top: 8rpx;
-  width:24rpx;
-  height:24rpx;
-  margin-right: 8rpx;
-  vertical-align: bottom;
-}
-

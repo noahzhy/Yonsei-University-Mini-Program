@@ -27,6 +27,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   //以下代码是由 张昊宇 写的
+  addNew(){
+    
+    wx.navigateTo({
+      // url: '../logs/logs',
+      url: '../comment/comment',
+    })
+
+    // wx.showToast()
+  },
   onShow: function () {
     // 页面显示
     var that = this;
