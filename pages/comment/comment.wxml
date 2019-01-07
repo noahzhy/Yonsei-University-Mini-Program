@@ -7,41 +7,46 @@
 
     <text class='title-mini-gray'>给分</text>
     <view class='row-wrap'>
-      <block wx:for="{{grade}}"
-        data-item="item">
-        <text class="{{item.check?'text-check':'text-uncheck'}}">{{item.txt}}</text>
+      <block wx:for="{{grade}}">
+        <text bindtap='changeColor'
+          id="{{item.id}}"
+          class="{{item.check?'text-check':'text-uncheck'}}">{{item.txt}}</text>
       </block>
     </view>    
 
     <text class='title-mini-gray'>出席</text>
     <view class='row-wrap'>
-      <block wx:for="{{attend}}"
-        data-item="item">
-        <text class="{{item.check?'text-check':'text-uncheck'}}">{{item.txt}}</text>
+      <block wx:for="{{attend}}">
+        <text bindtap='changeColor'
+          id="{{item.id}}"
+          class="{{item.check?'text-check':'text-uncheck'}}">{{item.txt}}</text>
       </block>
     </view>  
 
     <text class='title-mini-gray'>课题</text>
     <view class='row-wrap'>
-      <block wx:for="{{homework}}"
-        data-item="item">
-        <text class="{{item.check?'text-check':'text-uncheck'}}">{{item.txt}}</text>
+      <block wx:for="{{homework}}">
+        <text bindtap='changeColor'
+          id="{{item.id}}"
+          class="{{item.check?'text-check':'text-uncheck'}}">{{item.txt}}</text>
       </block>
     </view> 
 
     <text class='title-mini-gray'>小组讨论</text>
     <view class='row-wrap'>
-      <block wx:for="{{group}}"
-        data-item="item">
-        <text class="{{item.check?'text-check':'text-uncheck'}}">{{item.txt}}</text>
+      <block wx:for="{{group}}">
+        <text bindtap='changeColor'
+          id="{{item.id}}"
+          class="{{item.check?'text-check':'text-uncheck'}}">{{item.txt}}</text>
       </block>
     </view>
 
     <text class='title-mini-gray'>考试次数</text>
     <view class='row-wrap'>
-      <block wx:for="{{exam}}"
-        data-item="item">
-        <text class="{{item.check?'text-check':'text-uncheck'}}">{{item.txt}}</text>
+      <block wx:for="{{exam}}">
+        <text bindtap='changeColor'
+          id="{{item.id}}"
+          class="{{item.check?'text-check':'text-uncheck'}}">{{item.txt}}</text>
       </block>
     </view>
 
@@ -49,9 +54,10 @@
 
     <text class='title-mini-gray'>课程总价</text>
     <view class='row-wrap'>
-      <block wx:for="{{point}}"
-        data-item="item">
-        <text class="{{item.check?'text-check':'text-uncheck'}}">{{item.txt}}</text>
+      <block wx:for="{{point}}">
+        <text bindtap='changeColor'
+          id="{{item.id}}"
+          class="{{item.check?'text-check':'text-uncheck'}}">{{item.txt}}</text>
       </block>
     </view>
 

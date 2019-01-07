@@ -4,7 +4,9 @@
     "pages/logs/logs",
     "pages/class/class",
     "pages/point/point",
-    "pages/comment/comment"
+    "pages/comment/comment",
+    "pages/book/book",
+    "pages/rule/rule"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -33,13 +35,13 @@
       {
         "selectedIconPath": "images/books.png",
         "iconPath": "images/books_linear.png",
-        "pagePath": "pages/point/point",
+        "pagePath": "pages/book/book",
         "text": "二手书"
       },
       {
         "selectedIconPath": "images/hourse.png",
         "iconPath": "images/hourse_linear.png",
-        "pagePath": "pages/point/point",
+        "pagePath": "pages/book/book",
         "text": "租房信息"
       }
     ]

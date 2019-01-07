@@ -2,7 +2,8 @@
 <view class="content">
   <view class="row">
     <view style="flex:1">
-      <view class="col">
+      <view class="col"
+      bindtap='toBook'>
         <image class='mid-five-one'
           src='/images/book-sell.png'>
         </image>
@@ -45,7 +46,8 @@
   <view class='books'>
 
     <text class='books-title-mini'>知识就是力量</text>
-    <view class='books-row'>
+    <view class='books-row'
+      bindtap='toBook'>
       <text class='title-max'>二手书交易</text>
       <text
         decode="{{true}}" 
@@ -97,73 +99,25 @@
         class='books-title-more'>&nbsp;></text>
     </view>
 
-    <view class='class-col'>
-      <view class='class-row'>
-        <text style="flex:1"
-          class='class-title'>高级韩国语</text>
-        <text style="flex:1"
-          class='class-prof-name'>조성문</text>
+    <block wx:for="{{content}}">
+      <view id="{{item.id}}">
+        <view class='class-col'>
+          <text class='class-title'>{{item.title}}</text>
+          <view class="class-star-row">
+            <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="it">
+              <image class="class-star" 
+                wx:if="{{item.star < it}}" src="../../images/no-star.png"></image>
+              <image class="class-star"
+                wx:else="{{item.star >= it}}" src="../../images/full-star.png"></image>
+            </block>
+          </view>
+          <text class='class-rec-content'>{{item.txt}}</text>
+        </view>
       </view>
-      <text class='class-rec-content'>{{motto}}</text>
-    </view>
-
-    <view class="class-star-row">
-      <block wx:for="{{stars}}" wx:for-item="item">
-        <image 
-          class="class-star"
-          src="../../images/{{item}}-star.png">
-        </image>
-      </block>
-
-      <text class='class-rate-point'>4.8</text>
-    </view>
-
-    <view class="divLine-in"></view>
-
-    <view class='class-col'>
-      <view class='class-row'>
-        <text style="flex:1"
-          class='class-title'>高级韩国语</text>
-        <text style="flex:1"
-          class='class-prof-name'>조성문</text>
-      </view>
-      <text class='class-rec-content'>{{motto}}</text>
-    </view>
-
-    <view class="class-star-row">
-      <block wx:for="{{stars}}" wx:for-item="item">
-        <image 
-          class="class-star"
-          src="../../images/{{item}}-star.png">
-        </image>
-      </block>
-
-      <text class='class-rate-point'>4.8</text>
-    </view>
-
-    <view class="divLine-in"></view>
-
-    <view class='class-col'>
-      <view class='class-row'>
-        <text style="flex:1"
-          class='class-title'>高级韩国语</text>
-        <text style="flex:1"
-          class='class-prof-name'>조성문</text>
-      </view>
-      <text class='class-rec-content'>{{motto}}</text>
-    </view>
-
-    <view class="class-star-row">
-      <block wx:for="{{stars}}" wx:for-item="item">
-        <image 
-          class="class-star"
-          src="../../images/{{item}}-star.png">
-        </image>
-      </block>
-
-      <text class='class-rate-point'>4.8</text>
-    </view>
-
-
+      <view class="divLine-in"></view>
+    </block>
   </view>
+
+  <text class='text-rule' bindtap='toRule'>合作意向 · 隐私条款 · 免责条款</text>
+
 </view>

@@ -1,6 +1,11 @@
 /**index.wxss**/
+.content {
+  padding-bottom: 32rpx;
+}
+
 .divLine-in{
   background: #EDF2F5;
+  margin-top: 16rpx;
   height: 1rpx;
 }
 
@@ -76,14 +81,6 @@
   border-radius: 4rpx;
 }
 
-.class-row {
-  background: white;
-  padding-top: 16rpx;
-  padding-bottom: 8rpx;
-  display: flex;
-  flex-direction: row;
-}
-
 .class-col {
   background: white;
   display: flex;
@@ -100,21 +97,22 @@
 
 .class-title {
   color: black;
+  font-weight: bold;
+  margin-top: 16rpx;
   font-size: 14pt;
 }
 
-.class-prof-name {
-  padding-top: 6rpx;
-  text-align: right;
-  color: #004483;
-  font-size: 11pt;
-}
-
 .class-rec-content {
-  color: darkgray;
+  color: black;
   font-size: 11pt;
 }
 
 .class-star {
-  padding-top: 12rpx;
+  padding-top: 4rpx;
+}
+
+.text-rule {
+  text-align: center;
+  color: gray;
+  font-size: 12pt;
 }

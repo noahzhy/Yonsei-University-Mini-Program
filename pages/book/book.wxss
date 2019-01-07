@@ -1,0 +1,52 @@
+/* pages/book/book.wxss */
+/* pages/class.wxss */
+.col {
+  margin-top: 96rpx;
+}
+
+.title-max {
+  padding-bottom: 24rpx;
+}
+
+
+.title-sell {
+  font-weight: bold;
+  color: #004483;
+  margin-top: 8rpx;
+  font-size: 13pt;
+}
+
+.book-cover {
+  width: 172rpx;
+  height: 154rpx;
+  margin-top: 32rpx;
+  margin-right: 16rpx;
+  border-radius: 4rpx;
+}
+
+.col-right {
+  background: white;
+  display: flex;
+  margin-top: 32rpx;
+  margin-left: 24rpx;
+  margin-right: 16rpx;
+  margin-bottom: 32rpx;
+  flex-direction: column;
+}
+
+.book-title {
+  font-size: 14pt;
+  margin-bottom: 16rpx;
+}
+
+.book-wx {
+  color: gray;
+  margin-bottom: -4rpx;
+  font-size: 12pt;
+}
+
+.book-price {
+  font-size: 14pt;
+  font-weight: bold;
+  color: #004483;
+}

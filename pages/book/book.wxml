@@ -1,0 +1,56 @@
+<!--pages/book/book.wxml-->
+<view class="search-bar">
+  <view class='search-bar-row'>
+    <input class='search-input' 
+      placeholder="输入书名关键词搜索">
+    </input>
+
+    <image class='search-icon'
+      src='/images/search-1.png'>
+    </image>
+
+  </view>
+</view>
+
+<view class='content'>
+  <view class='col'>
+    <view class='row'>
+      <text style='flex:1'
+        class='title-max'>二手书</text>
+      <view style='flex:1'
+        class='row-rank'>
+        <text class='title-sell'>我也要卖书</text>
+      </view>
+    </view>
+
+    <view class="divLine"></view>
+
+    <view class='row'>
+      <image class='book-cover'
+        style='flex:1'
+        mode="widthFix"
+        src='/images/book-cover.jpg'>
+      </image>
+      <view class='col-right'
+        style='flex:3'>
+        <text class='book-title'>最新物理学I</text>
+        <view class='row'>
+          <text class='book-wx'>联系人：</text>
+          <text class='book-wx'>test1</text>
+        </view>
+        <view class='row'>
+          <text class='book-wx'>微信：</text>
+          <text class='book-wx'>test101</text>
+        </view>
+        <view class='row'>
+          <text class='book-price'>10,000</text>
+          <text class='book-price'>원</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="divLine"></view>
+
+
+  </view>
+</view>

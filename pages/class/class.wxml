@@ -28,76 +28,26 @@
 
     <view class="divLine"></view>
 
-    <text class='title-class-name'>高级韩国语 : 조성문</text>
+    <block wx:for="{{content}}">
+      <view id="{{item.id}}" 
+        class='col-mini' 
+        bindtap='toPoint'>
+        <text class='title-class-name'>{{item.title}}</text>
+        <view class="class-star-row">
+          <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="it">
+            <image class="class-star" 
+              wx:if="{{item.star < it}}" src="../../images/no-star.png"></image>
+            <image class="class-star"
+              wx:else="{{item.star >= it}}" src="../../images/full-star.png"></image>
+          </block>
+        </view>
+        <text class='class-content-time'>{{item.time}}</text>
+        <text class='class-content'>{{item.txt}}</text>
+      </view>
+      <view class="divLine"></view>
+    </block>
 
-    <view class="class-star-row">
-      <block wx:for="{{stars}}" wx:for-item="item">
-        <image 
-          class="class-star"
-          src="../../images/{{item}}-star.png">
-        </image>
-      </block>
-    </view>
-
-    <text class='class-content-time'>2018年12月25日</text>
-
-    <text class='class-content'>{{motto}}</text>
-
-    <view class="divLine"></view>
-
-
-    <text class='title-class-name'>高级韩国语 : 조성문</text>
-
-    <view class="class-star-row">
-      <block wx:for="{{stars}}" wx:for-item="item">
-        <image 
-          class="class-star"
-          src="../../images/{{item}}-star.png">
-        </image>
-      </block>
-    </view>
-
-    <text class='class-content-time'>2018年12月25日</text>
-
-    <text class='class-content'>{{motto}}</text>
-
-    <view class="divLine"></view>
-
-
-    <text class='title-class-name'>高级韩国语 : 조성문</text>
-
-    <view class="class-star-row">
-      <block wx:for="{{stars}}" wx:for-item="item">
-        <image 
-          class="class-star"
-          src="../../images/{{item}}-star.png">
-        </image>
-      </block>
-    </view>
-
-    <text class='class-content-time'>2018年12月25日</text>
-
-    <text class='class-content'>{{motto}}</text>
-
-    <view class="divLine"></view>
-
-
-    <text class='title-class-name'>高级韩国语 : 조성문</text>
-
-    <view class="class-star-row">
-      <block wx:for="{{stars}}" wx:for-item="item">
-        <image 
-          class="class-star"
-          src="../../images/{{item}}-star.png">
-        </image>
-      </block>
-    </view>
-
-    <text class='class-content-time'>2018年12月25日</text>
-
-    <text class='class-content'>{{motto}}</text>
-
-    <view class="divLine"></view>
+   
 
   </view>
 </view>

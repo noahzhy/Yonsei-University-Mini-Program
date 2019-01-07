@@ -1,45 +1,12 @@
 /* pages/class.wxss */
-.search-bar {
-  background: #004483;
-  width: 100%;
-  position: fixed;
-  z-index: 999;
-}
-
-.search-input {
-  font-size: 13pt;
-}
-
-.search-icon {
-  width: 48rpx;
-  height: 48rpx;
-  position: absolute;
-  right: 32rpx;
-  top: 32rpx;
-}
-
-.search-bar-row {
-  background: white;
-  margin: 16rpx;
-  padding-top: 20rpx;
-  padding-bottom: 20rpx;
-  padding-left: 32rpx;
-  padding-right: 80rpx;
-  border-radius: 20rpx;
-  flex: auto;
-}
-
 .col {
   margin-top: 96rpx;
 }
 
-.row-rank {
+.col-mini {
   background: white;
   display: flex;
-  flex-direction: row;
-  text-align: right;
-  position: absolute;
-  right: 48rpx;
+  flex-direction: column;
 }
 
 .title-max {

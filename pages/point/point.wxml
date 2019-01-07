@@ -2,110 +2,69 @@
 <view class='content'>
   <view class='col'>
     <view class='row'>
-      <text style='flex:1'
-        class='title-max'>고급한국어 : 조성문</text>
-      <button class='button'
-        bindtap='addNew'>写新评价</button>
+      <text style='flex:1' class='title-max'>{{classData.title}}</text>
+      <button class='button' bindtap='addNew'>写新评价</button>
     </view>
 
     <view class="class-star-row">
-      <block wx:for="{{stars}}" wx:for-item="item">
-        <image 
-          class="class-star"
-          src="../../images/{{item}}-star.png">
-        </image>
+      <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="it">
+        <image class="class-star" 
+          wx:if="{{classData.star+1 <= it+0.3}}" src="../../images/no-star.png"></image>
+        <image class="class-star"
+          wx:elif="{{classData.star+1 >= it+0.4 && classData.star+1 < it+0.7}}" src="../../images/half-star.png"></image>
+        <image class="class-star"
+          wx:else="{{classData.star > it-0.6 }}" src="../../images/full-star.png"></image>
       </block>
 
-      <text class='class-rate-point'>4.8</text>
+      <text class='class-rate-point'>{{classData.star}}</text>
     </view>
 
     <!-- 课程的韩文原名 -->
     <view class='row'>
-      <text style='flex:1'
-        class='title-mini-gray'>课程名</text>
-      <text style='flex:3'
-        class='title-mini-black'>高级韩国语</text>
+      <text style='flex:1' class='title-mini-gray'>课程名</text>
+      <text style='flex:3' class='title-mini-black'>{{classData.ch_name}}</text>
     </view>
-    <!-- 教授韩文名 -->
-    <!-- <view class='row'>
-      <text style='flex:1'
-        class='title-mini-gray'>教授名</text>
-      <text style='flex:3'
-        class='title-mini-black'>조성문</text>
-    </view> -->
     <!-- 给分 -->
     <view class='row'>
-      <text style='flex:1'
-        class='title-mini-gray'>给分</text>
-      <text style='flex:3'
-        class='title-mini-black'>基本A+</text>
+      <text style='flex:1' class='title-mini-gray'>给分</text>
+      <text style='flex:3' class='title-mini-black'>{{classData.grade}}</text>
     </view>
     <!-- 出席 -->
     <view class='row'>
-      <text style='flex:1'
-        class='title-mini-gray'>出席</text>
-      <text style='flex:3'
-        class='title-mini-black'>网课</text>
+      <text style='flex:1' class='title-mini-gray'>出席</text>
+      <text style='flex:3' class='title-mini-black'>{{classData.attend}}</text>
     </view>
     <!-- 课题 -->
     <view class='row'>
-      <text style='flex:1'
-        class='title-mini-gray'>课题</text>
-      <text style='flex:3'
-        class='title-mini-black'>一次</text>
+      <text style='flex:1' class='title-mini-gray'>课题</text>
+      <text style='flex:3' class='title-mini-black'>{{classData.homework}}</text>
     </view>
     <!-- 小组讨论 -->
     <view class='row'>
-      <text style='flex:1'
-        class='title-mini-gray'>小组讨论</text>
-      <text style='flex:3'
-        class='title-mini-black'>无</text>
+      <text style='flex:1' class='title-mini-gray'>小组讨论</text>
+      <text style='flex:3' class='title-mini-black'>{{classData.group}}</text>
     </view>
     <!-- 考试回数 -->
     <view class='row'>
-      <text style='flex:1'
-        class='title-mini-gray'>考试次数</text>
-      <text style='flex:3'
-        class='title-mini-black'>两次</text>
+      <text style='flex:1' class='title-mini-gray'>考试次数</text>
+      <text style='flex:3' class='title-mini-black'>{{classData.exam}}</text>
     </view>
-
   </view>
 
   <view class="divLine"></view>
 
-  <view class="class-star-row-mini">
-    <block wx:for="{{stars}}" wx:for-item="item">
-      <image 
-        class="class-star-mini"
-        src="../../images/{{item}}-star.png">
-      </image>
-    </block>
-  </view>
-  <text class='class-content-time'>2018年12月25日</text>
-  <text class='class-content'>{{motto}}</text>
-  <view class="divLine-mini"></view>
+  <block wx:for="{{content}}">
+    <view class="class-star-row-mini">
+      <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="it">
+        <image class="class-star-mini" 
+          wx:if="{{item.star < it}}" src="../../images/no-star.png"></image>
+        <image class="class-star-mini"
+          wx:else="{{item.star >= it}}" src="../../images/full-star.png"></image>
+      </block>
+    </view>
+    <text class='class-content-time'>{{item.time}}</text>
+    <text class='class-content'>{{item.txt}}</text>
+    <view class="divLine-mini"></view>
+  </block>
 
-  <view class="class-star-row-mini">
-    <block wx:for="{{stars}}" wx:for-item="item">
-      <image 
-        class="class-star-mini"
-        src="../../images/{{item}}-star.png">
-      </image>
-    </block>
-  </view>
-  <text class='class-content-time'>2018年12月25日</text>
-  <text class='class-content'>{{motto}}</text>
-  <view class="divLine-mini"></view>
-
-  <view class="class-star-row-mini">
-    <block wx:for="{{stars}}" wx:for-item="item">
-      <image 
-        class="class-star-mini"
-        src="../../images/{{item}}-star.png">
-      </image>
-    </block>
-  </view>
-  <text class='class-content-time'>2018年12月25日</text>
-  <text class='class-content'>{{motto}}</text>
-  <view class="divLine-mini"></view>
 </view>

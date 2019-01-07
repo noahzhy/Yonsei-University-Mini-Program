@@ -45,8 +45,8 @@ Page({
       { id: 50, check: false, txt: "1分" },
       { id: 51, check: false, txt: "2分" },
       { id: 52, check: false, txt: "3分" },
-      { id: 51, check: true, txt: "4分" },
-      { id: 52, check: false, txt: "5分" }
+      { id: 53, check: true, txt: "4分" },
+      { id: 54, check: false, txt: "5分" }
     ]
   },
   /**
@@ -104,13 +104,95 @@ Page({
   onShareAppMessage: function () {
 
   },
-
+  changeColor(e) {
+    var that = this
+    console.log(">>>" + e.target.id)
+    let gradeArr = [];
+    let attendArr = [];
+    let homeworkArr = [];
+    let groupArr = [];
+    let examArr = [];
+    let pointArr = [];
+    var tmp = Math.floor(e.target.id / 10)
+    switch (tmp) {
+      case 0:
+        for (var i = 0; i < that.data.grade.length; i++) {
+          if (e.target.id == i) {
+            gradeArr[i] = { id: that.data.grade[i].id, check: true, txt: that.data.grade[i].txt }
+          } else {
+            gradeArr[i] = { id: that.data.grade[i].id, check: false, txt: that.data.grade[i].txt }
+          }
+        }
+        this.setData({
+          grade: gradeArr
+        })
+        break;
+      case 1:
+        for (var i = 0; i < that.data.attend.length; i++) {
+          if (e.target.id % 10 == i) {
+            attendArr[i] = { id: that.data.attend[i].id, check: true, txt: that.data.attend[i].txt }
+          } else {
+            attendArr[i] = { id: that.data.attend[i].id, check: false, txt: that.data.attend[i].txt }
+          }
+        }
+        this.setData({
+          attend: attendArr
+        })
+        break;
+      case 2:
+        for (var i = 0; i < that.data.homework.length; i++) {
+          if (e.target.id % 20 == i) {
+            homeworkArr[i] = { id: that.data.homework[i].id, check: true, txt: that.data.homework[i].txt }
+          } else {
+            homeworkArr[i] = { id: that.data.homework[i].id, check: false, txt: that.data.homework[i].txt }
+          }
+        }
+        this.setData({
+          homework: homeworkArr
+        })
+        break;
+      case 3:
+        for (var i = 0; i < that.data.group.length; i++) {
+          if (e.target.id % 30 == i) {
+            groupArr[i] = { id: that.data.group[i].id, check: true, txt: that.data.group[i].txt }
+          } else {
+            groupArr[i] = { id: that.data.group[i].id, check: false, txt: that.data.group[i].txt }
+          }
+        }
+        this.setData({
+          group: groupArr
+        })
+        break;
+      case 4:
+        for (var i = 0; i < that.data.exam.length; i++) {
+          if (e.target.id % 40 == i) {
+            examArr[i] = { id: that.data.exam[i].id, check: true, txt: that.data.exam[i].txt }
+          } else {
+            examArr[i] = { id: that.data.exam[i].id, check: false, txt: that.data.exam[i].txt }
+          }
+        }
+        this.setData({
+          exam: examArr
+        })
+        break;
+      case 5:
+        for (var i = 0; i < that.data.point.length; i++) {
+          if (e.target.id % 50 == i) {
+            pointArr[i] = { id: that.data.point[i].id, check: true, txt: that.data.point[i].txt }
+          } else {
+            pointArr[i] = { id: that.data.point[i].id, check: false, txt: that.data.point[i].txt }
+          }
+        }
+        this.setData({
+          point: pointArr
+        })
+        break;
+    }
+  },
   addNewFinish (){
-
     wx.navigateBack({
       delta: 1
     })
-    
     wx.showToast({
       title: '提交成功',
       icon: 'success'
