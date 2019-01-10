@@ -1,0 +1,36 @@
+<!--pages/sell/sell.wxml-->
+<view class='content'>
+  <view class='col'>
+    <text class='title-max'>二手书信息</text>
+  </view>
+  <view class='divLine'></view>
+  <view class='row'>
+    <image class='books-cover'
+      style='flex:1'
+      mode="widthFix"
+      src='/images/book-cover.jpg'></image>
+    <view class='col' style='flex:3'>
+      <picker bindchange="pickerChange" 
+        value="{{nowIndex}}" 
+        range="{{booksInfo}}" 
+        range-key="{{'name'}}">
+        <view class='col'>
+          <text class='book-title'>{{booksInfo[nowIndex].name}}</text>
+        </view>
+      </picker>
+      <view class='col'>
+        <input class='book-input' type='text' placeholder='请输入书名'></input>
+        <text class='book-wechat'>卖方微信：test101</text>
+      </view>
+    </view>
+  </view>
+
+  <text class='title-mini-gray'>价格</text>
+  <view class='row-wrap'>
+    <block wx:for="{{price}}">
+      <text bindtap='changeColor'
+        id="{{item.id}}"
+        class="{{item.check?'text-check':'text-uncheck'}}">{{item.price}}</text>
+    </block>
+  </view>    
+</view>

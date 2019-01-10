@@ -3,7 +3,7 @@
   <view class='col'>
     <text class='title-max'>写新评价</text>
 
-    <view class='divLine' style='margin-top:16rpx'></view>
+    <view class='divLine'></view>
 
     <text class='title-mini-gray'>给分</text>
     <view class='row-wrap'>

@@ -12,19 +12,6 @@
   padding-bottom: 16rpx;
 }
 
-.button {
-  font-size: 12pt;
-  color: white;
-  text-align: center;
-  height: 80rpx;
-  font-weight: bold;
-  padding-left: 32rpx;
-  padding-right: 32rpx;
-  margin-top: -10rpx;
-  background: #004483;
-  border-radius: 40rpx;
-}
-
 .class-star-row-mini {
   background: white;
   margin-top: 16rpx;
@@ -63,4 +50,19 @@
 .class-content-time {
   font-size: 10pt;
   color: gray;
+}
+
+.label {
+  font-size: 10pt;
+  color: white;
+  background: #0060b9;
+  padding: 3rpx 12rpx;
+  text-align: center;
+  border-radius: 8rpx;
+  margin-right: 12rpx;
+}
+
+.test {
+  background: lightpink;
+  text-align: left;
 }

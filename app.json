@@ -6,7 +6,9 @@
     "pages/point/point",
     "pages/comment/comment",
     "pages/book/book",
-    "pages/rule/rule"
+    "pages/rule/rule",
+    "pages/sell/sell",
+    "pages/bookDetail/bookDetail"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -41,7 +43,7 @@
       {
         "selectedIconPath": "images/hourse.png",
         "iconPath": "images/hourse_linear.png",
-        "pagePath": "pages/book/book",
+        "pagePath": "pages/sell/sell",
         "text": "租房信息"
       }
     ]

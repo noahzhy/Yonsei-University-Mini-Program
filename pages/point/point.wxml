@@ -6,6 +6,24 @@
       <button class='button' bindtap='addNew'>写新评价</button>
     </view>
 
+    <view class='row' style='margin-bottom:8rpx'>
+      <block wx:for="{{classData.label}}">
+        <view bindtap='toLabel'>
+          <text wx:if="{{item === '外专'}}" style='background:lightblue' class='label'>{{item}}</text>
+          <text wx:elif="{{item === '古阅'}}" style='background:lightcoral' class='label'>{{item}}</text>
+          <text wx:elif="{{item === '语言'}}" style='background:lightsalmon' class='label'>{{item}}</text>
+          <text wx:elif="{{item === '未创'}}" style='background:lightseagreen' class='label'>{{item}}</text>
+          <text wx:elif="{{item === '科技'}}" style='background:lightskyblue' class='label'>{{item}}</text>
+          <text wx:elif="{{item === '人文'}}" style='background:lemonchiffon' class='label'>{{item}}</text>
+          <text wx:elif="{{item === '软件'}}" style='background:lightpink' class='label'>{{item}}</text>
+          <text wx:elif="{{item === '专必'}}" style='background:lightblue' class='label'>{{item}}</text>
+          <text wx:elif="{{item === '教必'}}" style='background:lightblue' class='label'>{{item}}</text>
+          <text wx:else="{{item === '核教'}}" class='label'>{{item}}</text>
+        </view>
+      </block>
+    </view>
+    
+
     <view class="class-star-row">
       <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="it">
         <image class="class-star" 

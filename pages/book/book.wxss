@@ -1,5 +1,8 @@
 /* pages/book/book.wxss */
-/* pages/class.wxss */
+.content {
+  padding-bottom: 32rpx;
+}
+
 .col {
   margin-top: 96rpx;
 }
@@ -7,7 +10,6 @@
 .title-max {
   padding-bottom: 24rpx;
 }
-
 
 .title-sell {
   font-weight: bold;
@@ -39,7 +41,7 @@
   margin-bottom: 16rpx;
 }
 
-.book-wx {
+.book-seller-numbers {
   color: gray;
   margin-bottom: -4rpx;
   font-size: 12pt;

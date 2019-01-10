@@ -3,18 +3,17 @@
   <view class="row">
     <view style="flex:1">
       <view class="col"
-      bindtap='toBook'>
-        <image class='mid-five-one'
-          src='/images/book-sell.png'>
+        bindtap='toBook'
+        style='align-items:center'>
+        <image class='mid-five-one' src='/images/book-sell.png'>
         </image>
         <text class='mid-five-font'>二手书</text>
       </view>
     </view>
 
     <view style="flex:1">
-      <view class="col">
-        <image class='mid-five-one'
-          src='/images/question.png'>
+      <view class="col" style='align-items:center'>
+        <image class='mid-five-one' src='/images/question.png'>
         </image>
         <text class='mid-five-font'>问题</text>
       </view>
@@ -22,7 +21,8 @@
 
     <view style="flex:1">
       <view class="col"
-        bindtap='toClass'>
+        bindtap='toClass'
+        style='align-items:center'>
         <image class='mid-five-one'
           src='/images/class-rec.png'>
         </image>
@@ -31,7 +31,7 @@
     </view>
 
     <view style="flex:1">
-      <view class="col">
+      <view class="col" style='align-items:center'>
         <image class='mid-five-one'
           src='/images/rent.png'>
         </image>
@@ -88,7 +88,7 @@
 
   <view class="divLine"></view>
 
-  <view class='class-rec'>
+  <view class='col' style='padding-top: 32rpx; margin-bottom: 16rpx;'>
 
     <text class='books-title-mini'>就决定是你了</text>
     <view class='books-row'
@@ -101,7 +101,7 @@
 
     <block wx:for="{{content}}">
       <view id="{{item.id}}">
-        <view class='class-col'>
+        <view class='col'>
           <text class='class-title'>{{item.title}}</text>
           <view class="class-star-row">
             <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="it">
@@ -118,6 +118,6 @@
     </block>
   </view>
 
-  <text class='text-rule' bindtap='toRule'>合作意向 · 隐私条款 · 免责条款</text>
+  <text class='text-bottom' bindtap='toRule'>合作意向 · 隐私条款 · 免责条款</text>
 
 </view>

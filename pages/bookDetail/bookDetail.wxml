@@ -1,0 +1,36 @@
+<!--pages/bookDetail/bookDetail.wxml-->
+<wxs module="threeNum" src="../../utils/tools.wxs"></wxs>
+<view class='content'>
+  <view class='col'>
+    <view class='row'>
+      <text style='flex:1' class='title-max'>最新物理学I</text>
+      <button class='button' bindtap='addNew'>添加报价</button>
+    </view>
+    <view class='row' style='margin-bottom:56rpx'>
+      <image class='books-cover'
+      style='flex:1'
+      mode="widthFix"
+      src='/images/book-cover.jpg'></image>
+      <view class='col' style='flex:3'>
+        <text class='book-seller-numbers'>共有：7 人在售</text>
+        <text class='book-price'>最低 {{threeNum.toThousands(5000)}}원</text>
+      </view>
+    </view>
+
+  <view class="table">
+    <view class="tr bg-w">
+      <view class="th">序号</view>
+      <view class="th">联系人微信</view>
+      <view class="th ">出价</view>
+    </view>
+    <block wx:for="{{listData}}" wx:key="{{id}}">
+      <view class="{{index % 2 == 0 ? 'tr bg-g':'tr'}}">
+        <view class="td">{{item.id}}</view>
+        <view class="td">{{item.wechat}}</view>
+        <view class="td">{{threeNum.toThousands(item.price)}}원</view>
+      </view>
+    </block>
+  </view>
+
+  </view>
+</view>
