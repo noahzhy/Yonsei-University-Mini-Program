@@ -5,8 +5,8 @@ import os
 from bs4 import BeautifulSoup
 
 
-filename = 'post_db.csv'
-fieldHeader = ['id','code','name','prof','type','rate','notice']
+filename = 'HYU_post_db.csv'
+fieldHeader = ['id', 'code', 'name', 'prof', 'type', 'rate', 'notice']
 
 
 session = requests.Session()
@@ -15,20 +15,26 @@ session.headers.update(headers)
 
 
 def login():
+    # postdata = {
+    #     'userid': 'noahzhang',
+    #     'password': 'noahzhang0',
+    #     'redirect': '/',
+    #     'autologin': '1'
+    # }
     postdata = {
-        'userid': 'noahzhang',
-        'password': 'noahzhang0',
+        'userid': '2019253083',
+        'password': 'Wwy2000329@',
         'redirect': '/',
         'autologin': '1'
     }
     url = 'https://everytime.kr/user/login'
 
-    session.get(url,data=postdata)
+    session.get(url, data=postdata)
 
 
-def post(year,semester,start):
+def post(schoolid, year, semester, start):
     postdata = {
-        'campusId': '6',
+        'campusId': str(schoolid),
         'year': str(year),
         'semester': str(semester),
         'limitNum': '50',
@@ -45,29 +51,28 @@ def init_db(f,h):
     if(os.path.isfile(f)):
         pass
     else:
-        with open(f, 'w',encoding='utf-8-sig',newline='') as csvfile:
+        with open(f, 'w', encoding='utf-8-sig', newline='') as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=h)
             writer.writeheader()
 
 
-def main(y,s):
+def main(schoolid, y, s):
     login()
     p_name = ''
     p_prof = ''
     start = 0
-
     n_count = 0
 
-    init_db(filename,fieldHeader)
+    init_db(filename, fieldHeader)
 
-    csvFile = open(filename,'w',encoding='utf-8-sig',newline='')
+    csvFile = open(filename, 'w', encoding='utf-8-sig', newline='')
     writer = csv.writer(csvFile)
     writer.writerow(fieldHeader)
 
     while True:
-        wbdata = post(y,s,start)
+        wbdata = post(schoolid, y, s, start)
         print(start)
-        soup = BeautifulSoup(wbdata,'lxml')
+        soup = BeautifulSoup(wbdata, 'lxml')
         n_subject = soup.select("subject")
 
         # if (len(n_subject) <= 0) or (n_count >= 2):
@@ -102,9 +107,6 @@ def main(y,s):
                     'Rate':rate,
                     'Notice':notice
                 }
-
-                # print(data)
-
                 d1 = [
                     id,
                     code,
@@ -115,13 +117,16 @@ def main(y,s):
                     notice
                 ]
                 writer.writerow(d1)
-
             p_name = name
             p_prof = professor
-
         time.sleep(5)
-
     csvFile.close()
 
-
-main(2020,1)
+if __name__ == "__main__":
+    # Hanyang University
+    # filename = 'HYU_post_db.csv'
+    # main(6, 2020, 1)
+    # Yonsei University
+    filename = 'YSU_post_db.csv'
+    main(22, 2020, 1)
+    pass

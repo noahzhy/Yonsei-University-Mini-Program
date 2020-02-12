@@ -3,8 +3,8 @@ import string
 import csv
 
 
-filename = 'post_db.csv'
-filenameNew = 'post_db_new.csv'
+filename = 'YSU_post_db.csv'
+filenameNew = 'YSU_post_db_new.csv'
 fieldHeader = ['id','code','name','prof','type','rate','notice']
 
 class course:
