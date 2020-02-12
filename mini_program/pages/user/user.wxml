@@ -12,7 +12,7 @@
   </view>
 </view>
 <view class='content' hidden='{{bookHidden}}' style='padding-top:32rpx;'>
-  <text class='title-mini-black' >在售二手书</text>
+  <text class='title-mini-black'>在售二手书</text>
   <block wx:for="{{books}}">
     <view class='row' id='{{item.id}}'>
       <view class='col' style='flex:10;'>

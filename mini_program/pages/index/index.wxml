@@ -72,7 +72,7 @@
           </block>
         </view>
 
-        <text class='class-title'>{{inCaseNoProf.noprof(item.attributes.course_id.attributes.name,item.attributes.course_id.attributes.prof)}}
+        <text class='class-title'>{{inCaseNoProf.noprof(item.attributes.course_id.attributes.name, item.attributes.course_id.attributes.prof)}}
         </text>
         <text class='class-rec-content omit'>{{item.attributes.comment_content}}</text>
 
@@ -101,7 +101,7 @@
 
         </view>
       </view>
-      <view class='divLine-in' />
+      <view class='divLine-in'/>
     </block>
 
 

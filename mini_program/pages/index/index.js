@@ -41,25 +41,28 @@ Page({
     query.include('course_id');
     query.limit(3);
     query.descending('createdAt');
-    query.find().then( results => {
-      console.log(results)
-      this.setData({
-        course_comment: results,
-      })
-    }, function (error) {
-    });
+    query.find().then( 
+      results => {
+        console.log(results)
+        this.setData({
+          course_comment: results,
+        })
+      },
+      function (error) {}
+    );
 
     const query2 = new app.globalData.AV.Query("question");
     query2.descending('createdAt');
     query2.limit(3);
     query2.select(['wx_id', 'title', 'content']);
-    query2.find().then(res => {
-      console.log(res);
-      this.setData({
-        qlist: res,
-      })
-    });
-
+    query2.find().then(
+      res => {
+        console.log(res);
+        this.setData({
+          qlist: res,
+        })
+      }
+    );
   },
 
   toClass() {
@@ -121,9 +124,4 @@ Page({
       wx.stopPullDownRefresh() //停止下拉刷新
     }, 1500);
   },
-
-
 })
-
-
-
