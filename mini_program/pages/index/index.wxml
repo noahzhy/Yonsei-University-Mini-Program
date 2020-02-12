@@ -44,8 +44,8 @@
 
     <view class='books-row' style='margin-top:8rpx;'>
       <block wx:for="{{books}}">
-        <view style="flex:1" id='{{item.objectId}}' bindtap='toBookDetail'>
-          <image class='books-cover' mode="widthFix" src='{{item.image.url}}'>
+        <view style="flex:1" id='{{item.id}}' bindtap='toBookDetail'>
+          <image class='books-cover' mode="widthFix" src='{{item.attributes.image.attributes.url}}'>
           </image>
         </view>
       </block>
@@ -62,24 +62,23 @@
       <text decode="{{true}}" class='books-title-more'>&nbsp;></text>
     </view>
 
-    <!-- <block wx:for="{{course_comment}}">
-      <view id="{{item.course_id.objectId}}" bindtap="toPoint">
-        <view class='col'>
-          <view class="class-star-row">
-            <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="it">
-              <image class="class-star" wx:if="{{item.comment_rate < it}}" src="../../images/no-star.png"></image>
-              <image class="class-star" wx:else="{{item.comment_rate >= it}}" src="../../images/full-star.png"></image>
-            </block>
-          </view>
+    <block wx:for="{{course_comment}}">
+      <view id="{{item.attributes.course_id.objectId}}" bindtap="toPoint">
 
-          <text class='class-title' style='margin-top:8rpx; margin-bottom:8rpx;'>
-            {{inCaseNoProf.noprof(item.course_id.name,item.course_id.prof)}}
-          </text>
-          <text class='class-rec-content omit'>{{item.comment_content}}</text>
+        <view class="class-star-row">
+          <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="it">
+            <image class="class-star" wx:if="{{item.attributes.comment_rate < it}}" src="../../images/no-star.png"></image>
+            <image class="class-star" wx:else="{{item.attributes.comment_rate >= it}}" src="../../images/full-star.png"></image>
+          </block>
         </view>
+
+        <text class='class-title'>{{inCaseNoProf.noprof(item.attributes.course_id.attributes.name,item.attributes.course_id.attributes.prof)}}
+        </text>
+        <text class='class-rec-content omit'>{{item.attributes.comment_content}}</text>
+
       </view>
       <view class="divLine-in"></view>
-    </block> -->
+    </block>
   </view>
 
   <view style='padding-top: 8rpx; margin-bottom: 16rpx;'>
@@ -95,9 +94,9 @@
         <view style='margin-top:24rpx;'>
           <view class='row qa'>
             <text class='class-title q'>Q.</text>
-            <text class='class-title' style='margin-left:16rpx;'>{{item.title}}</text>
+            <text class='class-title' style='margin-left:16rpx;'>{{item.attributes.title}}</text>
           </view>
-          <text class='title-mini-black omit'>{{item.content}}</text>
+          <text class='title-mini-black omit'>{{item.attributes.content}}</text>
 
 
         </view>

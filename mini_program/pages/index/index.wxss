@@ -62,6 +62,7 @@
 }
 
 .title-max {
+  font-size: 14pt;
   padding-bottom: 0rpx;
 }
 
@@ -93,7 +94,7 @@
 
 .class-star-row {
   padding-top: 24rpx;
-  padding-bottom: 4rpx;
+  padding-bottom: 12rpx;
   display: flex;
   flex-direction: row;
 }
@@ -111,4 +112,9 @@
   margin-top: 0rpx;
 }
 
+
+.class-title {
+  margin-top: 8rpx;
+  margin-bottom:8rpx;
+}
 

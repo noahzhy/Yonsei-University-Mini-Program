@@ -22,8 +22,8 @@ var onlyDate = {
 }
 
 var inCaseNoProf = {
-  noprof:function(name,prof) {
-    if (prof.length < 2){
+  noprof:function(name, prof) {
+    if (prof == ''){
       return name;
     }else{
       return name+" : "+prof
