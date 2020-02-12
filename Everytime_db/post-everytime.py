@@ -15,22 +15,27 @@ session.headers.update(headers)
 
 
 def login():
-    postdata = {'userid': 'noahzhang',
-                'password': 'noahzhang0',
-                'redirect': '/'}
+    postdata = {
+        'userid': 'noahzhang',
+        'password': 'noahzhang0',
+        'redirect': '/',
+        'autologin': '1'
+    }
     url = 'https://everytime.kr/user/login'
 
     session.get(url,data=postdata)
 
 
 def post(year,semester,start):
-    postdata = {'campusId': '6',
-                'year': str(year),
-                'semester': str(semester),
-                'limitNum': '50',
-                'startNum': str(start)}
+    postdata = {
+        'campusId': '6',
+        'year': str(year),
+        'semester': str(semester),
+        'limitNum': '50',
+        'startNum': str(start)
+    }
 
-    url = 'https://everytime.kr/find/timetable/subject/list'
+    url = 'https://api.everytime.kr/find/timetable/subject/list'
     r = session.get(url,data=postdata)
 
     return r.text
@@ -100,13 +105,15 @@ def main(y,s):
 
                 # print(data)
 
-                d1 = [  id,
-                        code,
-                        name,
-                        professor,
-                        type,
-                        rate,
-                        notice]
+                d1 = [
+                    id,
+                    code,
+                    name,
+                    professor,
+                    type,
+                    rate,
+                    notice
+                ]
                 writer.writerow(d1)
 
             p_name = name
@@ -117,4 +124,4 @@ def main(y,s):
     csvFile.close()
 
 
-main(2019,1)
+main(2020,1)

@@ -68,13 +68,15 @@ def main():
         if p_name == x.name and p_prof == x.prof:
             pass
         else:
-            d1 = [  x.id,
-                    x.code,
-                    x.name,
-                    x.prof,
-                    x.type,
-                    x.rate,
-                    x.notice]
+            d1 = [  
+                x.id,
+                x.code,
+                x.name,
+                x.prof,
+                x.type,
+                x.rate,
+                x.notice
+            ]
             writer.writerow(d1)
 
         p_name = x.name
