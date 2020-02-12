@@ -84,9 +84,9 @@ App({
         wx.navigateTo({
           url: '/pages/answer/answer?question_id=5c6e6e5067f3560044b8bc94' +
             '&wx_id=' + 'hanyang' +
-            '&title=' + '欢迎进入汉阳大学' +
-            '&content=' + '在汉阳大学遇到任何问题都可以在此讨论哦。' +
-            '&time=' + '2018-02-21',
+            '&title=' + '欢迎进入延世大学' +
+            '&content=' + '在延世大学遇到任何问题都可以在此讨论哦。' +
+            '&time=' + '2019-02-12',
         })
       }else{
         wx.navigateTo({
