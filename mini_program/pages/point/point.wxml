@@ -5,7 +5,7 @@
 <view class='content'>
   <view class='col'>
     <view class='row'>
-      <text style='flex:1' class='title-max'>{{inCaseNoProf.noProf(classData.attributes.name,classData.attributes.prof)}}</text>
+      <text style='flex:1' class='title-max'>{{inCaseNoProf.noprof(classData.attributes.name,classData.attributes.prof)}}</text>
       <button class='button' bindgetuserinfo='login' open-type='getUserInfo'>写新评价</button>
     </view>
 

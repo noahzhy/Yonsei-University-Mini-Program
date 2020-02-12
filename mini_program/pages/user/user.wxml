@@ -7,7 +7,7 @@
     
     <view class='col head'>
       <open-data class="userinfo-nickname" style='padding-top:8rpx;' type="userNickName"></open-data>
-      <text class="userinfo-nickname">汉阳大学学生</text>
+      <text class="userinfo-nickname">延世大学学生</text>
     </view>
   </view>
 </view>

@@ -29,7 +29,7 @@
 
     <block wx:for="{{course_comment}}">
       <view id="{{item.course_id.objectId}}" class='col-mini' bindtap='toPoint'>
-        <text class='title-class-name'>{{inCaseNoProf.noProf(item.course_id.name,item.course_id.prof)}}</text>
+        <text class='title-class-name'>{{inCaseNoProf.noprof(item.course_id.name,item.course_id.prof)}}</text>
         <view class="class-star-row" style='margin-top:8rpx; margin-bottom:12rpx;'>
           <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="it">
             <image class="class-star" wx:if="{{item.comment_rate < it}}" src="../../images/no-star.png"></image>

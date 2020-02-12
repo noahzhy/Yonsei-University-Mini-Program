@@ -22,7 +22,7 @@ var onlyDate = {
 }
 
 var inCaseNoProf = {
-  noProf:function(name,prof) {
+  noprof:function(name,prof) {
     if (prof.length < 2){
       return name;
     }else{
@@ -45,6 +45,6 @@ var zeroOrNull = {
 module.exports = {
   toThousands: threeNum.toThousands,
   toDate: onlyDate.toDate,
-  noProf: inCaseNoProf.noProf,
+  noprof: inCaseNoProf.noprof,
   zeroNull: zeroOrNull.zeroNull,
 }

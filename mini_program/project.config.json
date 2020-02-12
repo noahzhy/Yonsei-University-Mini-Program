@@ -4,16 +4,17 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"enhance": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
+		"nodeModules": true,
 		"autoAudits": true,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
+		"showShadowRootInWxmlPanel": false,
+		"scopeDataCheck": true,
 		"uglifyFileName": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
@@ -23,7 +24,7 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"nodeModules": true
+		"bundle": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.1",

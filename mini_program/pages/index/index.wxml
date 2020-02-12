@@ -62,7 +62,7 @@
       <text decode="{{true}}" class='books-title-more'>&nbsp;></text>
     </view>
 
-    <block wx:for="{{course_comment}}">
+    <!-- <block wx:for="{{course_comment}}">
       <view id="{{item.course_id.objectId}}" bindtap="toPoint">
         <view class='col'>
           <view class="class-star-row">
@@ -73,14 +73,13 @@
           </view>
 
           <text class='class-title' style='margin-top:8rpx; margin-bottom:8rpx;'>
-          <!-- 哈哈哈 -->
-            {{inCaseNoProf.noProf(item.course_id.name,item.course_id.prof)}}
+            {{inCaseNoProf.noprof(item.course_id.name,item.course_id.prof)}}
           </text>
           <text class='class-rec-content omit'>{{item.comment_content}}</text>
         </view>
       </view>
       <view class="divLine-in"></view>
-    </block>
+    </block> -->
   </view>
 
   <view style='padding-top: 8rpx; margin-bottom: 16rpx;'>
