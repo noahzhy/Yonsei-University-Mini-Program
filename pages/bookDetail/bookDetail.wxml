@@ -1,0 +1,76 @@
+<!--pages/bookDetail/bookDetail.wxml-->
+<wxs module="threeNum" src="../../utils/tools.wxs"></wxs>
+<wxs module="zeroOrNull" src="../../utils/tools.wxs"></wxs>
+
+<view class='content'>
+  <view class='col'>
+    <view class='row'>
+      <text style='flex:1' class='title-max'>{{bookInfo.name}}</text>
+      <button class='button' open-type="getUserInfo" bindgetuserinfo="login" >添加报价</button>
+    </view>
+    <view class='row' style='margin-bottom:32rpx'>
+      <image class='books-cover' style='flex:1' mode="widthFix" src='{{bookInfo.image}}'></image>
+      <view class='col' style='flex:3; margin:16rpx;'>
+        <text class='book-seller-numbers'>相关课程：{{bookInfo.class}}</text>
+        <text class='book-seller-numbers'>共有：{{bookInfo.sellers}} 人在售</text>
+        <text class='book-price'>{{zeroOrNull.zeroNull(bookInfo.minPrice)}}</text>
+      </view>
+    </view>
+
+    <view class='divLine'></view>
+    <text class='title-mini-gray' style='margin-top:16rpx; margin-bottom:24rpx;'>在售此书的卖家</text>
+
+    <view class="table">
+      <view class="tr bg-w">
+        <view class="th no">序号</view>
+        <view class="th">联系人微信</view>
+        <view class="th ">报价</view>
+      </view>
+      <block wx:for="{{listData}}">
+        <view class="{{index % 2 == 0 ? 'tr bg-g':'tr'}}">
+          <view class="td no">{{index+1}}</view>
+          <view class="td">{{item.attributes.wx_id}}</view>
+          <view class="td">{{threeNum.toThousands(item.attributes.price)}}원</view>
+        </view>
+      </block>
+    </view>
+
+  </view>
+
+
+  <view class="modals modals-bottom-dialog" hidden="{{hideModal}}">
+    <view class="modals-cancel" bindtap="hideModal"></view>
+    <view class="bottom-dialog-body bottom-pos col" animation="{{animationData}}">
+      <text class='title-max bottom center'>填写信息</text>
+      <form bindsubmit='addNewPrice'>
+        <view class='row left' style='margin-top:72rpx; margin-bottom:12rpx;'>
+          <text class='font14'>联系人微信：</text>
+          <input class='font14 mtop6' 
+            name='wx_id' 
+            value='{{wx_id}}'
+            style='width:256rpx' 
+            type='text' 
+            placeholder='请输入微信号'>
+          </input>
+        </view>
+        <view class='row left' style='margin-bottom:12rpx;'>
+          <text class='book-price font15'>报价：</text>
+          <input class='book-price font15 mtop8' 
+            name='price' 
+            value='{{priceValue}}'
+            style='width:144rpx' 
+            type='number' 
+            placeholder='10000'>
+          </input>
+          <text class='book-price font15'>원</text>
+        </view>
+        <button class='button price' form-type='submit'>提交报价</button>
+
+        <text class='wrong left' hidden="{{hidden}}">{{wrongMsg}}</text>
+      </form>
+    </view>
+  </view>
+
+
+
+</view>

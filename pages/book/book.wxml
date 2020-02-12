@@ -1,0 +1,46 @@
+<!--pages/book/book.wxml-->
+<wxs module="threeNum" src="../../utils/tools.wxs"></wxs>
+<wxs module="zeroOrNull" src="../../utils/tools.wxs"></wxs>
+
+<view class='fixed'>
+  <view class='row ex' bindtap='toSearch'>
+
+  <view class='center'>
+    <image class='just-search' src='/images/search-1.png'></image>
+    <text class='search-text'>搜索</text>
+  </view>
+
+  </view>
+</view>
+
+
+<view class='content'>
+  <view class='col'>
+    <view class='row'>
+      <text style='flex:1' class='title-max'>二手书</text>
+      <view style='flex:1' class='row-rank' bindtap='toSell'>
+        <text class='title-sell'>卖书流程</text>
+      </view>
+    </view>
+
+    <view class="divLine"></view>
+
+    <block wx:for="{{books}}">
+      <view class='row' id='{{item.id}}' bindtap='toBookDetail'>
+        <image class='book-cover' style='flex:1' mode="widthFix" src='{{item.attributes.image.attributes.url}}'>
+        </image>
+        <view class='col-right' style='flex:3'>
+          <text class='book-title'>{{item.attributes.name}}</text>
+          <text class='book-seller-numbers'>相关课程：{{item.attributes.course}}</text>
+          <text class='book-seller-numbers'>共有：{{item.attributes.num_sellers}} 人在售</text>
+          <text class='book-price'>{{zeroOrNull.zeroNull(item.attributes.min_price)}}</text>
+        </view>
+      </view>
+      <view class="divLine"></view>
+    </block>
+
+  </view>
+
+  <text class='text-bottom' style='margin-top:24rpx;' bindtap='toAdd'>没有我要卖的书?</text>
+
+</view>

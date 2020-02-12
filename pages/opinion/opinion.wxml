@@ -1,0 +1,27 @@
+<!--pages/opinion/opinion.wxml-->
+<view class='content'>
+  <view class='col'>
+    <text class='title-max-center'>意见反馈</text>
+  </view>
+  <form bindsubmit='addNewOpinion'>
+    <view class='col'>
+      <text class='title-mini-gray'>标题</text>
+      <input class='input' 
+        name="title"
+        placeholder="填写标题"></input>
+      <text class='title-mini-gray'>具体内容</text>
+      <textarea class='textarea'
+        name='msg'
+        maxlength="500"
+        placeholder="填写意见的具体内容\n(不少于10个字)"
+        placeholder-style='text-align:top'>
+      </textarea>
+      <text class='wrong bottom' hidden='{{hidden}}'>具体内容不少于10个字！</text>
+      
+    </view>
+    <view class='row-wrap'>
+    <button class='button-add-bottom' form-type='submit'>提交意见</button>
+    </view>
+    
+  </form>
+</view>

@@ -1,0 +1,291 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+.textarea {
+  width: 95%;
+  font-size: 14pt;
+  height: 256rpx;
+  margin-top: 4rpx;
+  margin-bottom: 12rpx;
+  padding: 16rpx;
+  background: whitesmoke;
+  border-radius: 8rpx;
+}
+
+.content {
+  background: white;
+  display: flex;
+  padding: 48rpx;
+  flex-direction: column;
+}
+
+.col {
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  background: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.row-wrap {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.divLine{
+  background: #EDF2F5;
+  height: 1rpx;
+}
+
+.fixed {
+  background: #004483;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top:0;
+}
+
+.ex {
+  height: 48rpx;
+  background: white;
+  padding: 8rpx;
+  margin: 16rpx;
+  border-radius: 20rpx;
+}
+
+.search-input {
+  padding: 0rpx;
+  vertical-align: middle;
+  margin: 14rpx 8rpx 0rpx 20rpx;
+  font-size: 13pt;
+}
+
+.button-icon {
+  padding: 0rpx;
+  vertical-align: middle;
+  background: transparent;
+  color: transparent;
+  margin: auto;
+  border-radius: 0rpx;
+  border-style: none;
+  border-width: 0rpx;
+}
+
+.button-icon::after {
+  border: none;
+  background: transparent;
+}
+
+.row-rank {
+  background: white;
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  position: absolute;
+  right: 48rpx;
+}
+
+.title-sell {
+  font-weight: bold;
+  color: #004483;
+  margin-top: 8rpx;
+  font-size: 13pt;
+}
+
+.class-star-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.class-star {
+  width:24rpx;
+  height:24rpx;
+  margin-right: 2rpx;
+  vertical-align: bottom;
+}
+
+.class-rate-point {
+  color: black;
+  font-size: 12pt;
+  font-weight: bold;
+  margin-left: 16rpx;
+}
+
+.title-max {
+  font-size: 16pt;
+  font-weight: bold;
+  color: black;
+  padding-bottom: 16rpx;
+}
+
+.title-mini-gray {
+  color: gray;
+  font-size: 10pt;
+  margin-top: 12rpx;
+  margin-bottom: 12rpx;
+}
+
+.title-mini-black {
+  color: black;
+  font-size: 12pt;
+  margin-top: 4rpx;
+  margin-bottom: 12rpx;
+}
+
+.check {
+  padding: 10rpx 20rpx;
+  background: #EDF2F5;
+  font-size: 12pt;
+  border-radius: 32rpx;
+  margin: 4rpx 16rpx 12rpx 0rpx;
+}
+
+.ed {
+  color: #004483;
+  font-weight: bold;
+}
+
+.un {
+  color: gray;
+}
+
+.text-bottom {
+  text-align: center;
+  color: gray;
+  font-size: 12pt;
+}
+
+.books-cover {
+  width: 154rpx;
+  height: 154rpx;
+  margin: 16rpx 16rpx 0rpx 0rpx;
+  border-radius: 4rpx;
+}
+
+.button-add {
+  width: 100%;
+  font-weight: bold;
+  margin-top: 16rpx;
+  background: #004483;
+  border-radius: 48rpx;
+  color: white;
+}
+
+.button {
+  font-size: 12pt;
+  color: white;
+  text-align: center;
+  height: 80rpx;
+  font-weight: bold;
+  padding: 0rpx 32rpx;
+  margin-top: -10rpx;
+  background: #004483;
+  border-radius: 40rpx;
+}
+
+.book-price {
+  font-size: 14pt;
+  font-weight: bold;
+  color: #004483;
+}
+
+.book-seller-numbers {
+  color: gray;
+  margin-bottom: -4rpx;
+  font-size: 12pt;
+}
+
+.wrong {
+  color: lightcoral;
+  size: 14pt;
+}
+
+.omit {
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.q {
+  color: #004483;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.class-title {
+  color: black;
+  font-weight: bold;
+  margin-top: 0rpx;
+  font-size: 12pt;
+}
+
+.qa {
+  padding-bottom: 8rpx;
+}
+
+
+.just-search {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+
+.search-text{
+  font-size: 12pt;
+  margin-left: 8rpx;
+  color: grey;
+}
+
+.center {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  align-items: center;
+  vertical-align: middle;
+  text-align:center;
+}
+
+.input {
+  font-size: 14pt;
+  margin-top: 4rpx;
+  margin-bottom: 12rpx;
+  padding: 16rpx;
+  background: whitesmoke;
+  border-radius: 8rpx;
+}
+
+.button-add-bottom {
+  position: absolute;
+  left: 32rpx;
+  right: 32rpx;
+  bottom: 0;
+  /* width: 88%; */
+  margin: auto;
+  align-items: center;
+  vertical-align: middle;
+  text-align:center;
+
+  font-weight: bold;
+  margin-top: 16rpx;
+  margin-bottom: 32rpx;
+  background: #004483;
+  border-radius: 48rpx;
+  color: white;
+}

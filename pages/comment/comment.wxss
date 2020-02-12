@@ -1,0 +1,4 @@
+/* pages/comment/comment.wxss */
+.bottom {
+  margin-bottom: 64rpx;
+}

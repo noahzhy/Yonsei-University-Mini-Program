@@ -1,0 +1,40 @@
+<!--pages/question/question.wxml-->
+<wxs module="onlyDate" src="../../utils/tools.wxs"></wxs>
+<view class='fixed'>
+  <view class='row ex' bindtap='toSearch'>
+  <view class='center'>
+    <image class='just-search' src='/images/search-1.png'></image>
+    <text class='search-text'>搜索</text>
+  </view>
+  </view>
+</view>
+
+<view class='content'>
+  <view class='col mtop'>
+    <view class='row'>
+      <text style='flex:1' class='title-max'>校园讨论</text>
+      <view style='flex:1' class='row-rank'>
+        <text class='title-sell' bindtap='toAsk'>添加主题</text>
+      </view>
+    </view>
+    <view class="divLine"></view>
+    <block wx:for="{{objArr}}" >
+      <view class='col' id='{{item.id}}' bindtap='toAnswer'>
+        <view class='row-b' style='padding-top:24rpx;'>
+          <text class='q'>Q.</text>
+          <text class='question-title'>{{item.attributes.title}}</text>
+        </view>
+        <text class='title-mini-black omit' style='margin-top: 8rpx;'>{{item.attributes.content}}</text>
+        <text class='title-mini-gray' style='margin-top: 8rpx; margin-bottom: 8rpx;'>{{onlyDate.toDate(item.createdAt)}}</text>
+        <view class='row'>      
+          <view class='answer'>
+            <image class='answer-icon' src='/images/answer.png'></image>
+            <text style='margin-bottom:4rpx;'> 讨论</text>
+          </view>
+        </view>
+      </view>
+      <view class='divLine'style="margin-top:32rpx;" />
+    </block>
+
+  </view>
+</view>

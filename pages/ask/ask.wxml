@@ -1,0 +1,28 @@
+<!--pages/ask/ask.wxml-->
+<view class='content'>
+  <view class='col'>
+    <text class='title-max'>添加问题</text>
+    <div class='divLine'/>
+  </view>
+  <form bindsubmit='addQuestion'>
+    <view class='col'>
+      <text class='title-mini-gray'>问题题目</text>
+      <input class='input' 
+        name="title"
+        placeholder="填写题目"></input>
+      <text class='title-mini-gray'>具体问题</text>
+      <textarea class='textarea'
+        name='msg'
+        maxlength="500"
+        placeholder="填写问题的具体内容\n(不少于10个字)"
+        placeholder-style='text-align:top'>
+      </textarea>
+      <text class='wrong bottom' hidden='{{hidden}}'>具体内容不少于10个字！</text>
+      
+    </view>
+    <view class='row-wrap'>
+    <button class='button-add-bottom' form-type='submit'>提交问题</button>
+    </view>
+    
+  </form>
+</view>

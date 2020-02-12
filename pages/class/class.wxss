@@ -1,0 +1,50 @@
+/* pages/class.wxss */
+.col {
+  margin-top: 72rpx;
+}
+
+.col-mini {
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-max {
+  padding-bottom: 16rpx;
+}
+
+.title-class-name {
+  font-size: 14pt;
+  font-weight: bold;
+  margin-top: 24rpx;
+  color: black;
+}
+
+.title-rank {
+  font-size: 13pt;
+  margin-top:8rpx;
+  margin-left: 16rpx;
+  color: gray;
+}
+
+.ed {
+  font-weight: bold;
+  color: #004483;
+}
+
+.class-content {
+  margin-top: 8rpx;
+  margin-bottom: 32rpx;
+  font-size: 12pt;
+  color: black;
+}
+
+.class-content-time {
+  font-size: 10pt;
+  color: gray;
+}
+
+
+
+
+

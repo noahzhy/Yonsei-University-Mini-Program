@@ -1,0 +1,23 @@
+/* pages/answer/answer.wxss */
+.q {
+  color: #004483;
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+.a {
+  color: gray;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.textarea {
+  width: 95%;
+  font-size: 14pt;
+  height: 256rpx;
+  margin-top: 16rpx;
+  margin-bottom: 12rpx;
+  padding: 16rpx;
+  background: whitesmoke;
+  border-radius: 8rpx;
+}

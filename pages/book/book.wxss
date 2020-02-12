@@ -1,0 +1,36 @@
+/* pages/book/book.wxss */
+.content {
+  padding-bottom: 32rpx;
+}
+
+.col {
+  margin-top: 72rpx;
+}
+
+.title-max {
+  padding-bottom: 16rpx;
+}
+
+.book-cover {
+  width: 175rpx;
+  height: 200rpx;
+  margin-top: 32rpx;
+  margin-right: 16rpx;
+  border-radius: 4rpx;
+}
+
+.col-right {
+  background: white;
+  display: flex;
+  margin-top: 32rpx;
+  margin-left: 24rpx;
+  margin-right: 16rpx;
+  margin-bottom: 32rpx;
+  flex-direction: column;
+}
+
+.book-title {
+  font-size: 14pt;
+  font-weight: bold;
+  margin-bottom: 16rpx;
+}

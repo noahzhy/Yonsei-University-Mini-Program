@@ -1,0 +1,68 @@
+/* pages/point/point.wxss */
+.divLine{
+  margin-top: 24rpx;
+}
+
+.divLine-mini{
+  background: #EDF2F5;
+  height: 1rpx;
+}
+
+.title-max {
+  padding-bottom: 16rpx;
+}
+
+.class-star-row-mini {
+  background: white;
+  margin-top: 16rpx;
+  padding-bottom: 16rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.class-star {
+  width:40rpx;
+  height:40rpx;
+  margin-right: 8rpx;
+  vertical-align: top;
+}
+
+.class-star-mini {
+  padding-top: 12rpx;
+  width:24rpx;
+  height:24rpx;
+  margin-right: 8rpx;
+  vertical-align: bottom;
+}
+
+.class-rate-point {
+  margin-top: -8rpx;
+  font-size: 16pt;
+}
+
+.class-content {
+  margin-top: 8rpx;
+  margin-bottom: 32rpx;
+  font-size: 12pt;
+  color: black;
+}
+
+.class-content-time {
+  font-size: 10pt;
+  color: gray;
+}
+
+.label {
+  font-size: 10pt;
+  color: white;
+  background: #0060b9;
+  padding: 3rpx 12rpx;
+  text-align: center;
+  border-radius: 8rpx;
+  margin-right: 12rpx;
+}
+
+.test {
+  background: lightpink;
+  text-align: left;
+}

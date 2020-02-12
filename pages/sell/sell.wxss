@@ -1,0 +1,24 @@
+/* pages/sell/sell.wxss */
+.book-title {
+  color: #004483;
+  margin: 16rpx 0rpx 0rpx 8rpx;
+  padding: 12rpx 24rpx;
+  border-radius: 48rpx;
+  background: #EDF2F5;
+}
+
+.book-person {
+  font-size: 12pt;
+  color: gray;
+}
+
+.book-wechat {
+  margin: 16rpx 0rpx 0rpx 32rpx;
+  font-size: 12pt;
+  color: gray;
+}
+
+.book-input {
+  color: #004483;
+  margin: 8rpx 0rpx 0rpx 32rpx;
+}

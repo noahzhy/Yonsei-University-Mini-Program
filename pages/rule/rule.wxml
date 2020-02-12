@@ -1,0 +1,16 @@
+<!--pages/rule/rule.wxml-->
+<view class='content'>
+  <text class='title-max'>合作意向</text>
+  <text class='title-mini-black'>{{cooperation}}</text>
+  <text class='title-mini-black'>Email: <text style='color:#004483'>{{email}}</text></text>
+
+  <view style='margin-top:32rpx'></view>
+
+  <text class='title-max'>免责条款</text>
+  <text class='title-mini-black'>{{duty}}</text>
+
+  <view style='margin-top:32rpx'></view>
+
+  <text class='title-max'>隐私条款</text>
+  <text class='title-mini-black'>{{privacy}}</text>
+</view>

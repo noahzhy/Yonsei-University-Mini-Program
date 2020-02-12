@@ -1,0 +1,40 @@
+/* pages/question/question.wxss */
+.mtop {
+  margin-top: 72rpx;
+}
+
+.row-b {
+  align-items: flex-end;
+}
+
+.question-title {
+  margin-left: 16rpx;
+  color: black;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.answer-icon {
+  vertical-align:top;
+  width:24rpx; 
+  height:24rpx; 
+  margin-top:10rpx; 
+  margin-right:6rpx;
+}
+
+.answer {
+  color: #004483;
+  font-size: 11pt;
+  vertical-align:top;
+  margin-top: 8rpx;
+  background: white;
+  padding: 8rpx 24rpx;
+  border-radius: 4rpx;
+  border-style: solid;
+  border-width: 2rpx;
+  border-color: #004483;
+}
+
+.title-mini-black {
+  margin-bottom:0rpx;
+}

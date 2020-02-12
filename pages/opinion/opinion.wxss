@@ -1,0 +1,11 @@
+/* pages/opinion/opinion.wxss */
+.title-max-center{
+  font-size: 16pt;
+  font-weight: bold;
+  color: black;
+  padding-bottom: 16rpx;
+  margin: auto;
+  align-items: center;
+  vertical-align: middle;
+  text-align:center;
+}

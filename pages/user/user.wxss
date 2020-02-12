@@ -1,0 +1,41 @@
+/* pages/user/user.wxss */
+#userinfo{
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  display: flex;
+  overflow:hidden;
+  text-align: center;
+}
+
+.userinfo-nickname {
+  color: white;
+  font-size: 14pt;
+  font-weight: bold;
+  margin: 16rpx 32rpx 0rpx 32rpx;
+}
+
+.head {
+  background: #004483;
+}
+
+.title-mini-black {
+  font-weight: bold;
+  font-size: 15pt;
+}
+
+.book-title {
+  font-size: 14pt;
+}
+
+.close {
+  margin-top: 48rpx;
+  margin-right: 24rpx;
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.omit {
+  -webkit-line-clamp: 1;
+}

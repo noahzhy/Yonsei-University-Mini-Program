@@ -1,0 +1,59 @@
+<!--pages/user/user.wxml-->
+<wxs module="threeNum" src="../../utils/tools.wxs"></wxs>
+<view class='content head'>
+  <view class='row head'>
+      
+    <open-data type="userAvatarUrl" class="userinfo" id="userinfo"></open-data>
+    
+    <view class='col head'>
+      <open-data class="userinfo-nickname" style='padding-top:8rpx;' type="userNickName"></open-data>
+      <text class="userinfo-nickname">汉阳大学学生</text>
+    </view>
+  </view>
+</view>
+<view class='content' hidden='{{bookHidden}}' style='padding-top:32rpx;'>
+  <text class='title-mini-black' >在售二手书</text>
+  <block wx:for="{{books}}">
+    <view class='row' id='{{item.id}}'>
+      <view class='col' style='flex:10;'>
+        <text class='book-title' style='margin-top:24rpx;'>{{item.attributes.book_id.attributes.name}}</text>
+        <text class='book-title' style='color:#004483;font-weight:bold;'>报价：{{threeNum.toThousands(item.attributes.price)}}원</text>
+      </view>
+
+      <image class='close' 
+        id='{{item.id}}' 
+        mode="widthFix" 
+        bindtap='deleteBook' 
+        style='flex:1' 
+        src='/images/close.png'>
+      </image>
+      
+    </view>
+    <view class="divLine" style='margin-top:24rpx;'></view>
+  </block>
+</view>
+
+<view class='content' hidden='{{questionHidden}}' style='padding-top:32rpx;'>
+  <text class='title-mini-black'>我的讨论</text>
+  <block wx:for="{{qlist}}">
+    <view class='row' id='{{item.id}}'>
+      <view class='col' style='flex:10;'>
+        <text class='book-title' style='margin-top:24rpx;'>{{item.attributes.title}}</text>
+        <text class='title-mini-gray omit' style=''>{{item.attributes.content}}</text>
+      </view>
+
+      <image class='close' 
+        id='{{item.id}}' 
+        mode="widthFix" 
+        bindtap='deleteQuestion' 
+        style='flex:1' 
+        src='/images/close.png'>
+      </image>
+      
+    </view>
+    <view class="divLine" style='margin-top:24rpx;'></view>
+  </block>
+</view>
+<view class='col'> 
+ <text wx:if="{{questionHidden && bookHidden}}" class='title-mini-gray' style='margin:48rpx; font-size:12pt;'>暂无讨论或在售的二手书</text>
+</view>

@@ -1,0 +1,94 @@
+<!--pages/point/point.wxml-->
+<wxs module="onlyDate" src="../../utils/tools.wxs"></wxs>
+<wxs module="inCaseNoProf" src="../../utils/tools.wxs"></wxs>
+
+<view class='content'>
+  <view class='col'>
+    <view class='row'>
+      <text style='flex:1' class='title-max'>{{inCaseNoProf.noProf(classData.attributes.name,classData.attributes.prof)}}</text>
+      <button class='button' bindgetuserinfo='login' open-type='getUserInfo'>写新评价</button>
+    </view>
+
+    <view class='row' style='margin-bottom:8rpx'>
+      <block wx:for="{{classData.attributes.type}}">
+        <view bindtap='toLabel'>
+          <text wx:if="{{item === '외국인전용'}}" style='background:lightblue' class='label'>外专</text>
+          <text wx:elif="{{item === '古阅'}}" style='background:lightcoral' class='label'>{{item}}</text>
+          <text wx:elif="{{item === 'global'}}" style='background:lightsalmon' class='label'>语言</text>
+          <text wx:elif="{{item === '未创'}}" style='background:lightseagreen' class='label'>{{item}}</text>
+          <text wx:elif="{{item === '科技'}}" style='background:lightskyblue' class='label'>{{item}}</text>
+          <text wx:elif="{{item === '人文'}}" style='background:lemonchiffon' class='label'>{{item}}</text>
+          <text wx:elif="{{item === '软件'}}" style='background:lightpink' class='label'>{{item}}</text>
+          <text wx:elif="{{item === '专必'}}" style='background:lightblue' class='label'>{{item}}</text>
+          <text wx:elif="{{item === '教必'}}" style='background:lightblue' class='label'>{{item}}</text>
+          <text wx:elif="{{item === '핵심교양'}}" class='label'>核教</text>
+        </view>
+      </block>
+    </view>
+
+
+    <view class="class-star-row" style='margin-top:16rpx;'>
+      <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="it">
+        <image class="class-star" wx:if="{{classData.attributes.rate+1 <= it+0.3}}" src="../../images/no-star.png"></image>
+        <image class="class-star" wx:elif="{{classData.attributes.rate+1 >= it+0.4 && classData.attributes.star+1 < it+0.7}}" src="../../images/half-star.png"></image>
+        <image class="class-star" wx:else="{{classData.attributes.rate > it-0.6 }}" src="../../images/full-star.png"></image>
+      </block>
+      <text class='class-rate-point'>{{classData.attributes.rate}}</text>
+    </view>
+
+    <!-- 课程的韩文原名 -->
+    <view class='row'>
+      <text style='flex:1' class='title-mini-gray'>课程名</text>
+      <text style='flex:3' class='title-mini-black'>{{classData.attributes.Chinese_name}}</text>
+    </view>
+    <!-- 课程代码 -->
+    <view class='row'>
+      <text style='flex:1' class='title-mini-gray'>课程代码</text>
+      <text style='flex:3' class='title-mini-black'>{{classData.attributes.code}}</text>
+    </view>
+    <!-- 给分 -->
+    <view class='row'>
+      <text style='flex:1' class='title-mini-gray'>给分</text>
+      <text style='flex:3' class='title-mini-black'>{{classData.attributes.G_A_H_T_E[0]}}</text>
+    </view>
+    <!-- 出席 -->
+    <view class='row'>
+      <text style='flex:1' class='title-mini-gray'>出席</text>
+      <text style='flex:3' class='title-mini-black'>{{classData.attributes.G_A_H_T_E[1]}}</text>
+    </view>
+    <!-- 课题 -->
+    <view class='row'>
+      <text style='flex:1' class='title-mini-gray'>课题</text>
+      <text style='flex:3' class='title-mini-black'>{{classData.attributes.G_A_H_T_E[2]}}</text>
+    </view>
+    <!-- 小组讨论 -->
+    <view class='row'>
+      <text style='flex:1' class='title-mini-gray'>小组讨论</text>
+      <text style='flex:3' class='title-mini-black'>{{classData.attributes.G_A_H_T_E[3]}}</text>
+    </view>
+    <!-- 考试回数 -->
+    <view class='row'>
+      <text style='flex:1' class='title-mini-gray'>考试次数</text>
+      <text style='flex:3' class='title-mini-black'>{{classData.attributes.G_A_H_T_E[4]}}</text>
+    </view>
+  </view>
+
+  <view class="divLine"></view>
+
+  <block wx:for="{{comment_content}}">
+  <view bindlongtap='deleteSth' id='{{item.objectId}}' class='col'>
+    <view class="class-star-row-mini">
+      <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="it">
+        <image class="class-star-mini" wx:if="{{item.comment_rate < it}}" src="../../images/no-star.png"></image>
+        <image class="class-star-mini" wx:else="{{item.comment_rate >= it}}" src="../../images/full-star.png"></image>
+      </block>
+    </view>
+
+    <text class='class-content-time'>{{onlyDate.toDate(item.createdAt)}}</text>
+
+    <text class='class-content'>{{item.comment_content}}</text>
+    <view class="divLine-mini"></view>
+  </view>
+  </block>
+
+</view>

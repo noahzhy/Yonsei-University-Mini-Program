@@ -1,0 +1,117 @@
+/* pages/bookDetail/bookDetail.wxss */
+.book-seller-numbers {
+  color: gray;
+  font-size: 12pt;
+}
+
+.table {
+  border: 0rpx solid darkgray;
+}
+
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2.5rem;
+  align-items: center;
+}
+
+.td {
+  width:40%;
+  justify-content: center;
+  text-align: center;
+}
+
+.bg-w{
+  background: snow;
+}
+
+.bg-g{
+  background: #E6F3F9;
+}
+
+.th {
+  width: 40%;
+  justify-content: center;
+  background: #004483;
+  color: #fff;
+  display: flex;
+  height: 2.5rem;
+  align-items: center;
+}
+
+.no {
+  width: 20%;
+}
+
+.modals {
+  position: fixed; 
+  z-index: 999; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+}
+
+.modals-cancel { 
+  position:absolute;
+  z-index:1000; 
+  top:0; 
+  left: 0; 
+  right:0; 
+  bottom: 0; 
+  background-color: rgba(0,0,0,.5);
+}
+
+.bottom-dialog-body{
+  position: absolute; 
+  z-index: 10001; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  padding: 32rpx; 
+  height: 332rpx; 
+  background-color: #fff;
+}
+
+.price {
+  color: white;
+  position: absolute;
+  bottom: 48rpx;
+  right: 48rpx;
+}
+
+/*动画前初始位置*/
+.bottom-pos {
+  -webkit-transform:translateY(0);
+  transform:translateY(0);
+}
+
+.bottom {
+  margin-bottom: 16rpx;
+}
+
+.left {
+  margin-left: 64rpx;
+  margin-right: 64rpx;
+}
+
+.center {
+  text-align: center;
+}
+
+.font14 {
+  font-size: 14pt;
+}
+
+.font15 {
+  font-size: 15pt;
+}
+
+.mtop6 {
+  margin-top: 6rpx;
+}
+
+.mtop8 {
+  margin-top: 8rpx;
+}

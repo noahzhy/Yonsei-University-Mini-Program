@@ -1,0 +1,21 @@
+<view class='content'>
+  <view class='col'>
+    <text class='title-max'>二手书信息</text>
+    <div class="divLine"/>
+  </view>
+  <form bindsubmit='addNewBook'>
+    <view class='col'>
+      <text class='title-mini-gray'>书名</text>
+      <input class='input' 
+        name="name"
+        placeholder="填写书名"></input>
+      <text class='title-mini-gray'>相关课程</text>
+      <input class='input' 
+        name="course"
+        placeholder="填写相关课程信息"></input>
+
+      <text class='wrong bottom' hidden='{{hidden}}'>书名或相关课程信息不能为空！</text>
+      <button class='button-add-bottom' style='margin-top:88rpx;' form-type='submit'>添加二手书目</button>
+    </view>
+  </form>
+</view>

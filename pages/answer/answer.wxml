@@ -1,0 +1,54 @@
+<!--pages/answer/answer.wxml-->
+<wxs module="onlyDate" src="../../utils/tools.wxs"></wxs>
+<view class='content'>
+  <view class='col'>
+    <view class='row'>
+      <text class='q'>Q.</text>
+      <text class='q' style='color:black; margin-left:16rpx;'>{{qinfo.title}}</text>
+    </view>
+    <text class='title-mini-black' style='margin-top:16rpx; margin-bottom: 4rpx;'>{{qinfo.content}}</text>
+    <view class='row'>
+      <text class='title-mini-gray'>{{onlyDate.toDate(qinfo.time)}}</text>
+    </view>
+    
+
+    <view class='divLine' style='margin:24rpx 0rpx;'/>
+
+
+    <block wx:for="{{alist}}">
+      <view class='col' bindlongtap='deleteSth' id='{{item.objectId}}'>
+        <view class='row'>
+          <text class='a'>A.</text>
+          <text class='title-mini-black' style='margin-left:16rpx;'>ID:</text>
+          <text class='title-mini-black' style='margin-left:8rpx;'>{{item.wx_id}}</text>
+        </view>
+
+        <text class='title-mini-black' style='margin-top:0rpx; margin-bottom: 4rpx;'>{{item.answer}}</text>
+        <text class='title-mini-gray'>{{onlyDate.toDate(item.createdAt)}}</text>
+        <view class='divLine' style='margin:24rpx 0rpx;'/>
+      </view>
+    </block>
+
+
+    <view class='row'>
+      <text class='a'>A.</text>
+      <text class='title-mini-black' style='margin-left:16rpx;'>ID:</text>
+      <open-data class='title-mini-black'style='margin-left:8rpx;' type="userNickName"></open-data>
+    </view>
+
+    <form bindsubmit='addNewAnswer'>
+      <textarea class='textarea'
+        value='{{txvalue}}'
+        name='answer'
+        maxlength="500"
+        placeholder="回复内容不得少于2个字"
+        placeholder-style='text-align:top'>
+      </textarea>
+      <text class='wrong'  style='margin-bottom:16rpx;' hidden="{{hidden}}">{{wrongMsg}}</text>
+      <view class='row'>
+        <button class='button-add' open-type="getUserInfo" bindgetuserinfo="login" form-type='submit'>回 复</button>
+      </view>
+    </form>
+
+  </view>
+</view>

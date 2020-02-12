@@ -1,0 +1,50 @@
+var threeNum = {
+  toThousands: function (num) {
+    var num = (num || 0).toString();
+    var result = '';
+    while (num.length > 3) {
+      result = ',' + num.slice(-3) + result;
+      num = num.slice(0, num.length - 3);
+    }
+    if (num) { result = num + result; }
+    return result;
+  }
+}
+
+var onlyDate = {
+  toDate: function (date) {
+
+    var mon = parseInt(date.slice(5, 7));
+    var day = parseInt(date.slice(8, 10));
+
+    return date.slice(0, 4)+"年"+mon+"月"+day+"日";
+  }
+}
+
+var inCaseNoProf = {
+  noProf:function(name,prof) {
+    if (prof.length < 2){
+      return name;
+    }else{
+      return name+" : "+prof
+    }
+  }
+}
+
+var zeroOrNull = {
+  zeroNull:function(num) {
+    if (num === null || num == "null") {
+      return "暂无报价"
+    } else{
+      var res = threeNum.toThousands(num);
+      return "最低 " + res + "월";
+    }
+  }
+}
+
+module.exports = {
+  toThousands: threeNum.toThousands,
+  toDate: onlyDate.toDate,
+  noProf: inCaseNoProf.noProf,
+  zeroNull: zeroOrNull.zeroNull,
+}

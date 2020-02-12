@@ -1,0 +1,48 @@
+<!--pages/class.wxml-->
+<wxs module="onlyDate" src="../../utils/tools.wxs"></wxs>
+<wxs module="inCaseNoProf" src="../../utils/tools.wxs"></wxs>
+<view class='fixed'>
+  <view class='row ex' bindtap='toSearch'>
+
+    <view class='center'>
+      <image class='just-search' src='/images/search-1.png'></image>
+      <text class='search-text'>搜索课程后添加评价</text>
+    </view>
+
+  </view>
+</view>
+
+
+<view class='content'>
+  <view class='col'>
+    <view class='row'>
+      <text style='flex:1' class='title-max'>课程评价</text>
+      <view style='flex:1' class='row-rank'>
+        <block wx:for="{{rankBy}}">
+          <text id='{{item.id}}' wx:if="{{item.check}}" class='title-rank ed' bindtap='rankBy' style='margin-left:16rpx;'>{{item.tx}}</text>
+          <text id='{{item.id}}' wx:else="{{item.check}}" class='title-rank' bindtap='rankBy' style='margin-left:16rpx;'>{{item.tx}}</text>
+        </block>
+      </view>
+    </view>
+
+    <view class="divLine"></view>
+
+    <block wx:for="{{course_comment}}">
+      <view id="{{item.course_id.objectId}}" class='col-mini' bindtap='toPoint'>
+        <text class='title-class-name'>{{inCaseNoProf.noProf(item.course_id.name,item.course_id.prof)}}</text>
+        <view class="class-star-row" style='margin-top:8rpx; margin-bottom:12rpx;'>
+          <block wx:for="{{[1,2,3,4,5]}}" wx:for-item="it">
+            <image class="class-star" wx:if="{{item.comment_rate < it}}" src="../../images/no-star.png"></image>
+            <image class="class-star" wx:else="{{item.comment_rate >= it}}" src="../../images/full-star.png"></image>
+          </block>
+        </view>
+        <text class='class-content-time'>{{onlyDate.toDate(item.createdAt)}}</text>
+        <text class='class-content'>{{item.comment_content}}</text>
+      </view>
+      <view class="divLine"></view>
+    </block>
+
+
+
+  </view>
+</view>

@@ -1,0 +1,78 @@
+<!--pages/comment/comment.wxml-->
+<view class='content'>
+  <view class='col'>
+    <text class='title-max'>写新评价</text>
+
+    <view class='divLine'></view>
+
+    <text class='title-mini-gray'>给分</text>
+    <view class='row-wrap'>
+      <block wx:for="{{grade}}">
+        <text bindtap='changeColor'
+          id="{{item.id}}"
+          class="{{item.check?'check ed':'check un'}}">{{item.txt}}</text>
+      </block>
+    </view>    
+
+    <text class='title-mini-gray'>出席</text>
+    <view class='row-wrap'>
+      <block wx:for="{{attend}}">
+        <text bindtap='changeColor'
+          id="{{item.id}}"
+          class="{{item.check?'check ed':'check un'}}">{{item.txt}}</text>
+      </block>
+    </view>  
+
+    <text class='title-mini-gray'>课题</text>
+    <view class='row-wrap'>
+      <block wx:for="{{homework}}">
+        <text bindtap='changeColor'
+          id="{{item.id}}"
+          class="{{item.check?'check ed':'check un'}}">{{item.txt}}</text>
+      </block>
+    </view> 
+
+    <text class='title-mini-gray'>小组讨论</text>
+    <view class='row-wrap'>
+      <block wx:for="{{group}}">
+        <text bindtap='changeColor'
+          id="{{item.id}}"
+          class="{{item.check?'check ed':'check un'}}">{{item.txt}}</text>
+      </block>
+    </view>
+
+    <text class='title-mini-gray'>考试次数</text>
+    <view class='row-wrap'>
+      <block wx:for="{{exam}}">
+        <text bindtap='changeColor'
+          id="{{item.id}}"
+          class="{{item.check?'check ed':'check un'}}">{{item.txt}}</text>
+      </block>
+    </view>
+
+    <view class='divLine' style='margin-top:16rpx'></view>
+
+    <text class='title-mini-gray'>课程总价</text>
+    <view class='row-wrap'>
+      <block wx:for="{{point}}">
+        <text bindtap='changeColor'
+          id="{{item.id}}"
+          class="{{item.check?'check ed':'check un'}}">{{item.txt}}</text>
+      </block>
+    </view>
+
+    <text class='title-mini-gray'>详细评价</text>
+    <form bindsubmit='addNewComment'>
+    <textarea class='textarea'
+      name='msg'
+      maxlength="300"
+      placeholder="填写有关该课程的具体信息\n(不少于10个字)"
+      placeholder-style='text-align:top'>
+    </textarea>
+    <text class='wrong bottom' hidden='{{hidden}}'>{{wrongMsg}}</text>
+    <view class='row'>
+      <button class='button-add' form-type='submit'>提交评价</button>
+    </view>
+    </form>
+  </view>
+</view>
